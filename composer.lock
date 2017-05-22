@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "20235690e3626aefc6d901acbc82da4f",
+    "content-hash": "f1b56c3b1b5c233d390b5874350e0d75",
     "packages": [
         {
             "name": "axllent/silverstripe-trailing-slash",
@@ -199,28 +199,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mak001/portfolio.git",
-                "reference": "2e1d285b4a3c21f12834ddb724b1334e90a04071"
+                "reference": "88f8379d4b2a788d6aafd0dc2cf7dd9f55854705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mak001/portfolio/zipball/2e1d285b4a3c21f12834ddb724b1334e90a04071",
-                "reference": "2e1d285b4a3c21f12834ddb724b1334e90a04071",
+                "url": "https://api.github.com/repos/mak001/portfolio/zipball/88f8379d4b2a788d6aafd0dc2cf7dd9f55854705",
+                "reference": "88f8379d4b2a788d6aafd0dc2cf7dd9f55854705",
                 "shasum": ""
             },
             "require": {
-                "axllent/silverstripe-trailing-slash": "dev-master",
                 "exadium/breadcrumbnavigation": "dev-master",
-                "mediaweb/silverstripe-tinymce4": "^1.1",
                 "php": ">=5.3.3",
                 "silverstripe/blog": "^2.4",
                 "silverstripe/cms": "^3.5",
                 "silverstripe/framework": "^3.5",
-                "silverstripe/googlesitemaps": "1.6.0",
                 "silverstripe/recaptcha": "^2.0",
                 "silverstripe/reports": "^3.5",
                 "silverstripe/siteconfig": "^3.5",
                 "silverstripe/spamprotection": "^2.0",
-                "xini/silverstripe-googleanalytics": "3.0.1"
+                "tractorcow/silverstripe-colorpicker": "3.0.*@dev",
+                "zauberfisch/silverstripe-better-image": "dev-master"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7@stable"
@@ -250,7 +248,7 @@
                 "source": "https://github.com/mak001/portfolio/tree/master",
                 "issues": "https://github.com/mak001/portfolio/issues"
             },
-            "time": "2017-05-22 16:56:57"
+            "time": "2017-05-22 18:20:37"
         },
         {
             "name": "mediaweb/silverstripe-tinymce4",
@@ -744,6 +742,42 @@
             "time": "2016-08-22T09:56:00+00:00"
         },
         {
+            "name": "tractorcow/silverstripe-colorpicker",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/silverstripe-colorpicker.git",
+                "reference": "2d1a1afc580b84dc47a8e708c09a3c7588385174"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-colorpicker/zipball/2d1a1afc580b84dc47a8e708c09a3c7588385174",
+                "reference": "2d1a1afc580b84dc47a8e708c09a3c7588385174",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "colorpicker"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                }
+            ],
+            "description": "Color picker field for Silverstripe CMS using the ColorPicker jQuery plugin",
+            "keywords": [
+                "color",
+                "colour",
+                "silverstripe"
+            ],
+            "time": "2015-01-27T20:44:50+00:00"
+        },
+        {
             "name": "xini/silverstripe-googleanalytics",
             "version": "3.0.1",
             "source": {
@@ -781,6 +815,44 @@
                 "tag manager"
             ],
             "time": "2017-04-06T06:17:43+00:00"
+        },
+        {
+            "name": "zauberfisch/silverstripe-better-image",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zauberfisch/silverstripe-better-image.git",
+                "reference": "078902ef26b18bacc03b8c8088a6f8a12ea1d721"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zauberfisch/silverstripe-better-image/zipball/078902ef26b18bacc03b8c8088a6f8a12ea1d721",
+                "reference": "078902ef26b18bacc03b8c8088a6f8a12ea1d721",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": ">=3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "better-image"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Zauberfisch",
+                    "email": "zauberfisch@zauberfisch.at"
+                }
+            ],
+            "description": "Adds additional methods to the SilverStripe Image class",
+            "homepage": "https://github.com/Zauberfisch/silverstripe-better-image",
+            "keywords": [
+                "silverstripe"
+            ],
+            "time": "2015-04-28 12:28:15"
         }
     ],
     "packages-dev": [
@@ -1207,6 +1279,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "axllent/silverstripe-trailing-slash": 20,
         "mak001/portfolio": 20,
         "phpunit/phpunit": 0
     },

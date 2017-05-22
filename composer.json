@@ -3,10 +3,16 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.3",
-		"silverstripe/cms": "3.5.3",
-		"silverstripe/framework": "3.5.3",
-		"silverstripe/reports": "3.5.3",
-		"silverstripe/siteconfig": "3.5.3",
+		"silverstripe/cms": "^3.5",
+		"silverstripe/framework": "^3.5",
+		"silverstripe/reports": "^3.5",
+		"silverstripe/siteconfig": "^3.5",
+		
+		"axllent/silverstripe-trailing-slash": "dev-master",
+		"silverstripe/googlesitemaps": "1.6.0",
+		"xini/silverstripe-googleanalytics": "3.0.1",
+		"mediaweb/silverstripe-tinymce4": "^1.1",
+	
 		"mak001/portfolio": "1.0.x-dev"
 	},
 	"repositories": [
