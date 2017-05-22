@@ -1,0 +1,413 @@
+@import "bootstrap/bootstrap";
+@import "_variables";
+@import "_mixins";
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+a:focus {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+header {
+	a {
+		text-decoration: none;
+		color: black;
+		
+		&:hover {
+			color: black;
+			text-decoration: none;
+		}
+	}
+		
+	.jumbotron {
+		@include fixedBG($mainImage);
+		margin-bottom: 0;
+		
+		.display-4, .lead {
+			font-weight: 500;
+		}
+	}
+}
+
+header + nav {
+	background: $paleGreen;
+	
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+	}
+
+	.container {
+		width: 100%;
+	}
+	
+	.nav-link {
+		color: black;
+		float: none;
+		font-weight: 500;
+		
+		&:hover {
+			background:	darken($paleGreen, 15%);
+		}
+		
+		
+		&.current, &.section {
+			color: rgba(255, 255, 255, 0.95);
+			text-overflow: clip;
+			text-shadow: -1px -1px 0 rgba(darken($paleGreen, 25%), 0.66);
+			
+			&:hover {
+				text-shadow: -1px -1px 0 rgba(darken($paleGreen, 45%), 0.66);
+			}
+		}
+	}
+}
+
+main {
+	flex-grow: 1;
+	
+	.container img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+main .jumbotron#project-header {
+	background-size: cover;
+	position: relative;
+	background-position: center top;
+	min-height: 250px;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	
+	
+	
+	h1 {
+		font-weight: 500;
+		color: white;
+	}
+	
+	&.overlay {
+		@include overlay(0.5);
+	}
+
+	&.img-center {
+		background-position: center center;
+	}
+}
+
+main {
+	p {
+		text-indent: 2.5em;
+	}
+
+	&.resume .main, &.resume {
+		@extend .col-md-8;
+		@extend .col-lg-6;
+		@extend .col-xl-4;
+		margin: auto;
+		
+		p {
+			text-indent: 0;
+		}
+	}
+}
+
+.uses-header {
+	p {
+		text-indent: 0;
+	}
+
+	hr {
+		box-sizing: border-box;
+	}
+}
+
+.card-deck .card {
+	height: 100%;
+}
+
+.card {
+	
+	.card-img-top, .card-img-bottom {
+		width: 100%;
+	}
+	
+	 .card-text {
+		text-indent:0;
+		text-align: justify;
+		text-align-last: left;
+		
+		p {
+			text-indent:0;
+		}
+	}
+
+	&.uses {
+		
+		a:not(.btn) {
+			display: block;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+		.card-title {
+			text-align: center;
+			padding: 10px 0;
+			@include outline;
+		}
+	}
+}
+
+.project-info {
+
+	figure {
+		@extend .col-md-6; 
+		@extend .col-lg-5; 
+		float: right;
+		
+		@media (min-width: map-get($grid-breakpoints, md)) {
+			&.first {
+				float: left;
+				padding-left: 0;
+			}
+		
+			&:not(.first) {
+				padding-right: 0;
+			}
+			
+			&::after {
+				clear:both;
+			}
+		}
+	}
+}
+
+figure {
+	
+	
+	img {
+		width: 100%;
+	}
+
+	figcaption {
+		text-align: justify;                
+   		text-align-last: left;
+	}
+}
+
+.modal-open {
+	padding: 0 !important;
+}
+
+.figure-modal {
+	padding: 0 !important;
+	
+	.modal-dialog {
+		max-width: initial;
+		width: 98%;
+		height: 92%;
+		padding: 0;
+		
+		.modal-content {
+			height: 99%;
+		}
+	}
+}
+
+.project-holder-nav, .local-nav {
+	height: auto;
+	flex-direction: column;
+	background-color: inherit;
+	z-index: $zindex-navbar;
+	
+	.progress-bar {
+		height: 100%;
+		flex-grow: 1;
+		flex-basis: 0;
+		border-radius: inherit;
+		
+		a {
+			display: block;
+			vertical-align: middle;
+			color: white;
+			@include outline(1);
+			
+			&:hover {
+				text-decoration: none;
+			}
+
+		}
+	
+		@media (min-width: map-get($grid-breakpoints, md)) { 
+			border-radius: 0;
+		}
+	
+	}
+
+	@media (min-width: map-get($grid-breakpoints, md)) { 
+		flex-direction: row;
+	}
+}
+
+.has-local-nav {
+	
+	h1, .h1, h2, .h2,  h3, .h3, h4, .h4 {
+		a {
+			display: block;
+			visibility: hidden;
+			position:relative;
+			top: -1.75em;
+		}
+	}
+	
+}
+
+.btn-container {
+	
+	.btn {
+		margin-bottom: 0.25em;
+	}
+}
+
+.info-text {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+	@include fixedBG($mainImage);
+	
+	.btn-outline-secondary {
+		color: black;
+		border-color: darken(white, 15%);
+		background-color: white;
+		
+		&:hover {
+			color: white;
+			border-color: lighten(black, 15%);
+			background-color: black;
+		}
+	}
+	
+	.links {
+		display: inline-block;
+		
+		&.nav {
+			display: block;
+			width: 100%;
+			
+			a {
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+		
+			.text {
+				display: inline-block;
+				@extend .pl-0;
+			}
+		
+			@media (min-width: map-get($grid-breakpoints, sm)) { 
+				display: inline-block;
+				width: auto;
+			}
+		}
+		
+		a {
+			display: inline-block;
+			text-decoration: none;
+			@extend .mb-2;
+			
+			.icon {
+				vertical-align: middle;
+				font-size: 2.5em;
+			}
+		
+			.text {
+				@extend .pl-2;
+				display: none;
+				align-self: center;
+			}
+		
+			@media (min-width: map-get($grid-breakpoints, sm)) { 
+				display: flex;
+				
+				.icon {
+					font-size: 2em;
+					width: 1.25em;
+					text-align: center;
+				}
+				
+				.text {
+					display: inline-block;
+				}
+			
+				.sr-only {
+					display: none;
+				}
+			
+			}
+		}
+	
+		@media (min-width: map-get($grid-breakpoints, sm)) {
+			text-align: left;
+		}
+	
+	}
+}
+
+.container {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+#project-show {
+	
+	header {
+		background: $paleGreen;
+		color: white;
+		border-bottom: 2px solid black;
+		
+		a:not(.btn) {
+			@include outline;
+			color: inherit;
+			
+			&:hover {
+				color: inherit;
+			}
+		}
+	
+		.v-center {
+			align-self: center;
+		}
+	
+		.home-link {
+		    display: inline-block;
+		}
+	}
+	
+	main {
+		position: relative;
+		background: $mainImage;
+		
+		iframe {
+			position:absolute;
+			width:100%;
+			height:100%;
+			border:none;
+		}
+	}
+	
+}

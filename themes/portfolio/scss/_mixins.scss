@@ -1,0 +1,93 @@
+@mixin fixedBG($bg) {
+	background: $bg;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin overlay($opacity, $color...) {
+	&::before {
+		display: block;
+		content: '';
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		$r: 0;
+		$g: 0;
+		$b: 0;
+		
+		@if length($color) == 1 {
+			$r: red(nth($color, 1));
+			$g: green(nth($color, 1));
+			$b: blue(nth($color, 1));
+			
+		} @else if length($color) == 3 {
+			$r: nth($color, 1);
+			$g: nth($color, 2);
+			$b: nth($color, 3);	
+			
+		}
+		
+		background-color: rgba($r, $g, $b, $opacity);
+	}
+}
+
+
+
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+   @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {Style}           - text-shadow
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}
+
+@mixin outline($stroke: 1, $color: white, $shadow: black) {
+	color: $color;
+	@include stroke($stroke, $shadow);
+}
+
+@mixin buttonLinks($subClass) {
+	text-decoration: none;
+	
+	.#{$subClass} {
+		display: inline-block;
+		margin: 2px 5px;
+		padding: 5px;
+		border-radius: 0.3rem;
+		
+		@include outline;
+		border: 2px solid black;
+		
+		&:last-child  {
+			margin-right: 0;
+		}
+	
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin _extends($selector) {
+	@extend #{$selector};
+}
