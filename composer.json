@@ -9,6 +9,12 @@
 		"silverstripe/siteconfig": "3.5.3",
 		"mak001/portfolio": "1.0.x-dev"
 	},
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mak001/portfolio"
+        }
+    ],
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
 	},

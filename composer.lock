@@ -4,8 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9b4752516b807cbafc5b7c0ad66717d",
+    "content-hash": "20235690e3626aefc6d901acbc82da4f",
     "packages": [
+        {
+            "name": "axllent/silverstripe-trailing-slash",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axllent/silverstripe-trailing-slash.git",
+                "reference": "1719a3a8d4da2e2a8bf0476323a1528d47c3b122"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axllent/silverstripe-trailing-slash/zipball/1719a3a8d4da2e2a8bf0476323a1528d47c3b122",
+                "reference": "1719a3a8d4da2e2a8bf0476323a1528d47c3b122",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "The MIT License (MIT)"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Slooten",
+                    "homepage": "http://www.axllent.org/"
+                }
+            ],
+            "description": "Ensure that a single trailing slash is always added to the URL",
+            "homepage": "https://github.com/axllent/silverstripe-trailing-slash",
+            "keywords": [
+                "seo",
+                "silverstripe",
+                "urls"
+            ],
+            "time": "2015-12-21 20:16:37"
+        },
         {
             "name": "composer/installers",
             "version": "v1.3.0",
@@ -121,40 +158,192 @@
             "time": "2017-04-24T06:37:16+00:00"
         },
         {
-            "name": "silverstripe-themes/simple",
-            "version": "3.1.0",
+            "name": "exadium/breadcrumbnavigation",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "3cf638c170e649b6b122504c8f62d6d8946b853c"
+                "url": "https://github.com/marijnkampf/Silverstripe-Module-BreadcrumbNavigation.git",
+                "reference": "9781b19a7d3471589c4e24005815e3b50facf823"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/3cf638c170e649b6b122504c8f62d6d8946b853c",
-                "reference": "3cf638c170e649b6b122504c8f62d6d8946b853c",
+                "url": "https://api.github.com/repos/marijnkampf/Silverstripe-Module-BreadcrumbNavigation/zipball/9781b19a7d3471589c4e24005815e3b50facf823",
+                "reference": "9781b19a7d3471589c4e24005815e3b50facf823",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "*",
-                "silverstripe/framework": ">=3.0"
+                "silverstripe/cms": "3.*"
             },
-            "type": "silverstripe-theme",
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Marijn Kampf",
+                    "email": "info@exadium.com"
+                }
+            ],
+            "description": "Self contained Breadcrum Navigation module, allowing you to control the breadcrumbs look and feel using templates, and add additional levels of bread crumbs for e.g. dataobjects.",
+            "keywords": [
+                "bread crumb navigation",
+                "bread crumbs",
+                "breadcrumb",
+                "module",
+                "navigation",
+                "silverstripe"
+            ],
+            "time": "2016-03-02 17:46:04"
+        },
+        {
+            "name": "mak001/portfolio",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mak001/portfolio.git",
+                "reference": "2e1d285b4a3c21f12834ddb724b1334e90a04071"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mak001/portfolio/zipball/2e1d285b4a3c21f12834ddb724b1334e90a04071",
+                "reference": "2e1d285b4a3c21f12834ddb724b1334e90a04071",
+                "shasum": ""
+            },
+            "require": {
+                "axllent/silverstripe-trailing-slash": "dev-master",
+                "exadium/breadcrumbnavigation": "dev-master",
+                "mediaweb/silverstripe-tinymce4": "^1.1",
+                "php": ">=5.3.3",
+                "silverstripe/blog": "^2.4",
+                "silverstripe/cms": "^3.5",
+                "silverstripe/framework": "^3.5",
+                "silverstripe/googlesitemaps": "1.6.0",
+                "silverstripe/recaptcha": "^2.0",
+                "silverstripe/reports": "^3.5",
+                "silverstripe/siteconfig": "^3.5",
+                "silverstripe/spamprotection": "^2.0",
+                "xini/silverstripe-googleanalytics": "3.0.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "portfolio",
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Koerber",
+                    "email": "matthew@matthewkoerber.com",
+                    "homepage": "http://matthewkoerber.com"
+                }
+            ],
+            "description": "Website module for MatthewKoerber.com",
+            "keywords": [
+                "silverstripe"
+            ],
+            "support": {
+                "source": "https://github.com/mak001/portfolio/tree/master",
+                "issues": "https://github.com/mak001/portfolio/issues"
+            },
+            "time": "2017-05-22 16:56:57"
+        },
+        {
+            "name": "mediaweb/silverstripe-tinymce4",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loyals-online/silverstripe-tinymce4.git",
+                "reference": "3d0861199edf19673032942ad1afe78314fecaa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loyals-online/silverstripe-tinymce4/zipball/3d0861199edf19673032942ad1afe78314fecaa8",
+                "reference": "3d0861199edf19673032942ad1afe78314fecaa8",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "~3.2",
+                "silverstripe/framework": "~3.2"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "tinymce4",
+                "screenshots": [
+                    "http://mediaweb.nl/assets/public/silverstripe-tinymce4.png"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Sara Tušar (Innovaif)",
-                    "homepage": "http://www.saratusar.com"
+                    "name": "Gabrijel Gavranović",
+                    "email": "gabrijel@gavro.nl"
                 }
             ],
-            "description": "The SilverStripe simple theme (default SilverStripe 3 theme)",
+            "description": "Replaces the default Silverstripe HTMLEditor (TinyMCE v3) with TinyMCE v4.",
+            "homepage": "https://github.com/Mediaweb/silverstripe-tinymce4",
             "keywords": [
+                "editor",
+                "htmleditor",
                 "silverstripe",
-                "theme"
+                "tinymce"
             ],
-            "time": "2015-04-09T03:18:37+00:00"
+            "time": "2016-07-15T14:14:10+00:00"
+        },
+        {
+            "name": "silverstripe/blog",
+            "version": "2.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-blog.git",
+                "reference": "7583e0bcd53dfd61e332f177c99e70b802582d4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/7583e0bcd53dfd61e332f177c99e70b802582d4b",
+                "reference": "7583e0bcd53dfd61e332f177c99e70b802582d4b",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^3.1.0",
+                "silverstripe/lumberjack": "~1.1",
+                "silverstripe/tagfield": "^1.0"
+            },
+            "replace": {
+                "micmania1/silverstripe-blog": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "suggest": {
+                "silverstripe/comments": "This module adds comments to your blog.",
+                "silverstripe/widgets": "Some widgets come with the blog which are compatible with the widgets module."
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Strong",
+                    "email": "github@michaelstrong.co.uk"
+                }
+            ],
+            "description": "A fresh take on blogging in Silverstripe set out to tackle the issue of a cluttered Site Tree.",
+            "keywords": [
+                "blog",
+                "news",
+                "silverstripe"
+            ],
+            "time": "2016-11-16T23:39:49+00:00"
         },
         {
             "name": "silverstripe/cms",
@@ -265,6 +454,119 @@
             "time": "2017-02-20T17:01:16+00:00"
         },
         {
+            "name": "silverstripe/googlesitemaps",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wilr/silverstripe-googlesitemaps.git",
+                "reference": "930fd7f9ac96450d9758d32c87d4d21e5dca73a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/930fd7f9ac96450d9758d32c87d4d21e5dca73a7",
+                "reference": "930fd7f9ac96450d9758d32c87d4d21e5dca73a7",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "googlesitemaps"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "SilverStripe support for the Google Sitemaps XML, enabling Google and other search engines to see all urls on your site. This helps your SilverStripe website rank well in search engines, and to encourage the information on your site to be discovered quickly.",
+            "homepage": "https://github.com/wilr/silverstripe-googlesitemaps",
+            "keywords": [
+                "googlesitemaps",
+                "seo",
+                "silverstripe"
+            ],
+            "time": "2016-09-26T17:43:00+00:00"
+        },
+        {
+            "name": "silverstripe/lumberjack",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-lumberjack.git",
+                "reference": "3ab14e8ec18639137f7ca7dc6b57a8ce28d5d1b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/3ab14e8ec18639137f7ca7dc6b57a8ce28d5d1b5",
+                "reference": "3ab14e8ec18639137f7ca7dc6b57a8ce28d5d1b5",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^3.1",
+                "silverstripe/framework": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Strong",
+                    "email": "mstrong@silverstripe.org"
+                }
+            ],
+            "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
+            "time": "2017-05-16T03:06:02+00:00"
+        },
+        {
+            "name": "silverstripe/recaptcha",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chillu/silverstripe-recaptcha.git",
+                "reference": "9fdbfedcc2fddc6e4d106a3dcdc3e3365eed2ff0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/9fdbfedcc2fddc6e4d106a3dcdc3e3365eed2ff0",
+                "reference": "9fdbfedcc2fddc6e4d106a3dcdc3e3365eed2ff0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1",
+                "silverstripe/spamprotection": "*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ingo Schommer",
+                    "email": "ingo@silverstripe.com"
+                }
+            ],
+            "description": "Provides a form field which allows form to validate for non-bot submissions by giving them a challenge to decrypt an image.",
+            "keywords": [
+                "silverstripe",
+                "spamprotection"
+            ],
+            "time": "2016-10-12T18:53:14+00:00"
+        },
+        {
             "name": "silverstripe/reports",
             "version": "3.5.3",
             "source": {
@@ -356,6 +658,129 @@
                 "siteconfig"
             ],
             "time": "2016-12-22T00:18:45+00:00"
+        },
+        {
+            "name": "silverstripe/spamprotection",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
+                "reference": "56ec1f42c625bde31f7e13d56cd9cae99a2727f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/56ec1f42c625bde31f7e13d56cd9cae99a2727f3",
+                "reference": "56ec1f42c625bde31f7e13d56cd9cae99a2727f3",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Saophalkun Ponlu",
+                    "email": "phalkunz@silverstripe.com"
+                },
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "Spam protection module for SilverStripe.",
+            "keywords": [
+                "silverstripe",
+                "spamprotection"
+            ],
+            "time": "2017-02-08T22:28:52+00:00"
+        },
+        {
+            "name": "silverstripe/tagfield",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
+                "reference": "00c950eecf07ec279240445a450fd10caa52a31f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/00c950eecf07ec279240445a450fd10caa52a31f",
+                "reference": "00c950eecf07ec279240445a450fd10caa52a31f",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Pitt",
+                    "email": "chris@silverstripe.com",
+                    "homepage": "http://github.com/assertchris"
+                }
+            ],
+            "description": "Tag field for Silverstripe",
+            "keywords": [
+                "field",
+                "silverstripe",
+                "tag"
+            ],
+            "time": "2016-08-22T09:56:00+00:00"
+        },
+        {
+            "name": "xini/silverstripe-googleanalytics",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xini/silverstripe-googleanalytics.git",
+                "reference": "a32397dcac64695e2191c519dba68e57b555bba9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xini/silverstripe-googleanalytics/zipball/a32397dcac64695e2191c519dba68e57b555bba9",
+                "reference": "a32397dcac64695e2191c519dba68e57b555bba9",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "googleanalytics"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Florian Thoma",
+                    "homepage": "http://www.innoweb.com.au"
+                }
+            ],
+            "description": "Adds Google Analytics to the site using old Asynchronous Analytics and Universal Analytics with event and download tracking as well as Google Tag Manager.",
+            "homepage": "http://github.com/xini/silverstripe-googleanalytics",
+            "keywords": [
+                "analytics",
+                "event tracking",
+                "multisites",
+                "silverstripe",
+                "tag manager"
+            ],
+            "time": "2017-04-06T06:17:43+00:00"
         }
     ],
     "packages-dev": [
@@ -782,6 +1207,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mak001/portfolio": 20,
         "phpunit/phpunit": 0
     },
     "prefer-stable": true,
