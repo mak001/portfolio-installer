@@ -16,6 +16,9 @@ _ss_environment.php
 #ignore assets
 /assets/
 
+#ignores error logs
+*.log
+
 #ignore module stuff
 /portfolio/
 /cms/
