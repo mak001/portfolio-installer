@@ -10,7 +10,6 @@
 		
 		"axllent/silverstripe-trailing-slash": "dev-master",
 		"silverstripe/googlesitemaps": "1.6.0",
-		"xini/silverstripe-googleanalytics": "3.0.1",
 		"mediaweb/silverstripe-tinymce4": "^1.1",
 	
 		"mak001/portfolio": "1.0.x-dev",
