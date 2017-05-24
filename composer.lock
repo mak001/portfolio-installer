@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1b56c3b1b5c233d390b5874350e0d75",
+    "content-hash": "8afe4cc7bca8c089cbf6d6f01694dfcd",
     "packages": [
         {
             "name": "axllent/silverstripe-trailing-slash",
@@ -199,16 +199,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mak001/portfolio.git",
-                "reference": "88f8379d4b2a788d6aafd0dc2cf7dd9f55854705"
+                "reference": "36ea460742d0e2584b30ee83277cca0c2de6f684"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mak001/portfolio/zipball/88f8379d4b2a788d6aafd0dc2cf7dd9f55854705",
-                "reference": "88f8379d4b2a788d6aafd0dc2cf7dd9f55854705",
+                "url": "https://api.github.com/repos/mak001/portfolio/zipball/36ea460742d0e2584b30ee83277cca0c2de6f684",
+                "reference": "36ea460742d0e2584b30ee83277cca0c2de6f684",
                 "shasum": ""
             },
             "require": {
                 "exadium/breadcrumbnavigation": "dev-master",
+                "mak001/portfolio-theme": "1.0.x-dev",
                 "php": ">=5.3.3",
                 "silverstripe/blog": "^2.4",
                 "silverstripe/cms": "^3.5",
@@ -248,7 +249,54 @@
                 "source": "https://github.com/mak001/portfolio/tree/master",
                 "issues": "https://github.com/mak001/portfolio/issues"
             },
-            "time": "2017-05-22 18:20:37"
+            "time": "2017-05-24 19:49:37"
+        },
+        {
+            "name": "mak001/portfolio-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mak001/portfolio-theme.git",
+                "reference": "e2ec93c049b5ae627bbfe5305f1577551d8f283e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mak001/portfolio-theme/zipball/e2ec93c049b5ae627bbfe5305f1577551d8f283e",
+                "reference": "e2ec93c049b5ae627bbfe5305f1577551d8f283e",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "mak001/portfolio": "1.0.x-dev",
+                "silverstripe/framework": ">=3.5"
+            },
+            "type": "silverstripe-theme",
+            "extra": {
+                "installer-name": "portfolio",
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Koerber (mak001)",
+                    "email": "matthew@matthewkoerber.com",
+                    "homepage": "http://matthewkoerber.com"
+                }
+            ],
+            "description": "The SilverStripe theme made for mak001's portfolio",
+            "keywords": [
+                "silverstripe",
+                "theme"
+            ],
+            "support": {
+                "source": "https://github.com/mak001/portfolio-theme/tree/master",
+                "issues": "https://github.com/mak001/portfolio-theme/issues"
+            },
+            "time": "2017-05-24 20:36:26"
         },
         {
             "name": "mediaweb/silverstripe-tinymce4",
@@ -1281,6 +1329,7 @@
     "stability-flags": {
         "axllent/silverstripe-trailing-slash": 20,
         "mak001/portfolio": 20,
+        "mak001/portfolio-theme": 20,
         "phpunit/phpunit": 0
     },
     "prefer-stable": true,

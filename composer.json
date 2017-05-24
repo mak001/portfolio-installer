@@ -13,12 +13,17 @@
 		"xini/silverstripe-googleanalytics": "3.0.1",
 		"mediaweb/silverstripe-tinymce4": "^1.1",
 	
-		"mak001/portfolio": "1.0.x-dev"
+		"mak001/portfolio": "1.0.x-dev",
+		"mak001/portfolio-theme": "1.0.x-dev"
 	},
 	"repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/mak001/portfolio"
+        },
+		{
+            "type": "vcs",
+            "url": "https://github.com/mak001/portfolio-theme"
         }
     ],
 	"require-dev": {
