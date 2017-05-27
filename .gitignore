@@ -26,6 +26,7 @@ _ss_environment.php
 /reports/
 /siteconfig/
 /themes/
+/mysite/_config/recaptcha.yml
 
 /tinymce4/
 /better-image/
