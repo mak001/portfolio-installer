@@ -1,0 +1,13 @@
+---
+Name: portfolio-installer
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SilverStripe\View\SSViewer:
+  themes:
+    - 'portfolio'
+    - '$default'
+
+SilverStripe\i18n\i18n:
+  default_locale: 'en_US'
