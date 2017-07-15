@@ -30,7 +30,10 @@
 
         "silverstripe/blog": "dev-master",
         "symbiote/silverstripe-gridfieldextensions": "^3.0",
-        "tractorcow/silverstripe-colorpicker": "^4@dev"
+        "tractorcow/silverstripe-colorpicker": "^4@dev",
+		
+		"mak001/portfolio": "2.x-dev",
+		"mak001/portfolio-theme": "2.x-dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7"

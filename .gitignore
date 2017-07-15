@@ -4,6 +4,11 @@
 # ignore .env file
 /.env
 
+#other
+*.sspak
+*.zip
+.idea/
+
 # ignore build tools
 /tools/phing-metadata
 

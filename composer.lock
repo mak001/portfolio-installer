@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e6cffc4ba33f604837278806b8a270e",
+    "content-hash": "9d5bcff6db6abe5d7b37eae7823bdac2",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -181,7 +181,7 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.0.9",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
@@ -449,6 +449,117 @@
                 "storage"
             ],
             "time": "2017-04-28T10:15:08+00:00"
+        },
+        {
+            "name": "mak001/portfolio",
+            "version": "dev-silverstripe-4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mak001/portfolio.git",
+                "reference": "e712ae3391fac9ef9db04cfcd4baee875c2a010d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mak001/portfolio/zipball/e712ae3391fac9ef9db04cfcd4baee875c2a010d",
+                "reference": "e712ae3391fac9ef9db04cfcd4baee875c2a010d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "silverstripe/asset-admin": "^1.0",
+                "silverstripe/cms": "^4.0",
+                "silverstripe/framework": "^4.0",
+                "silverstripe/lumberjack": "^2.0",
+                "silverstripe/reports": "4.0.x-dev",
+                "silverstripe/siteconfig": "4.0.x-dev",
+                "silverstripe/versioned": "1.0.x-dev",
+                "symbiote/silverstripe-gridfieldextensions": "^3.0",
+                "tractorcow/silverstripe-colorpicker": "^4@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7@stable"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "portfolio",
+                "branch-alias": {
+                    "dev-silverstripe-4": "2.x-dev",
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mak001\\portfolio\\": "src/",
+                    "mak001\\portfolio\\tests\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Koerber",
+                    "email": "matthew@matthewkoerber.com",
+                    "homepage": "http://matthewkoerber.com"
+                }
+            ],
+            "description": "Website module for MatthewKoerber.com",
+            "keywords": [
+                "silverstripe"
+            ],
+            "support": {
+                "source": "https://github.com/mak001/portfolio/tree/silverstripe-4",
+                "issues": "https://github.com/mak001/portfolio/issues"
+            },
+            "time": "2017-07-13 12:49:58"
+        },
+        {
+            "name": "mak001/portfolio-theme",
+            "version": "dev-silverstripe-4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mak001/portfolio-theme.git",
+                "reference": "3db168d2bf04892e1f1fecfcce81517f7b6721e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mak001/portfolio-theme/zipball/3db168d2bf04892e1f1fecfcce81517f7b6721e5",
+                "reference": "3db168d2bf04892e1f1fecfcce81517f7b6721e5",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/errorpage": "1.0.x-dev",
+                "silverstripe/framework": "4.0.x-dev"
+            },
+            "type": "silverstripe-theme",
+            "extra": {
+                "installer-name": "portfolio",
+                "branch-alias": {
+                    "dev-silverstripe-4": "2.x-dev",
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Koerber (mak001)",
+                    "email": "matthew@matthewkoerber.com",
+                    "homepage": "http://matthewkoerber.com"
+                }
+            ],
+            "description": "The SilverStripe theme made for mak001's portfolio",
+            "keywords": [
+                "silverstripe",
+                "theme"
+            ],
+            "support": {
+                "source": "https://github.com/mak001/portfolio-theme/tree/silverstripe-4",
+                "issues": "https://github.com/mak001/portfolio-theme/issues"
+            },
+            "time": "2017-07-09T23:42:59+00:00"
         },
         {
             "name": "marcj/topsort",
@@ -920,12 +1031,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-admin.git",
-                "reference": "9764e6a8c2c86d962ba31f96c7cf0d82921a73af"
+                "reference": "a418c70235bed515111406859717046fbfb86080"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/9764e6a8c2c86d962ba31f96c7cf0d82921a73af",
-                "reference": "9764e6a8c2c86d962ba31f96c7cf0d82921a73af",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/a418c70235bed515111406859717046fbfb86080",
+                "reference": "a418c70235bed515111406859717046fbfb86080",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +1080,7 @@
                 "admin",
                 "silverstripe"
             ],
-            "time": "2017-07-07 00:31:18"
+            "time": "2017-07-13 09:20:06"
         },
         {
             "name": "silverstripe/asset-admin",
@@ -977,12 +1088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "5ed3cddc9511dfce4d446bb10c4757c599300b68"
+                "reference": "7c8828b16ee9c996d2266d213eaefa29a73d09f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/5ed3cddc9511dfce4d446bb10c4757c599300b68",
-                "reference": "5ed3cddc9511dfce4d446bb10c4757c599300b68",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/7c8828b16ee9c996d2266d213eaefa29a73d09f8",
+                "reference": "7c8828b16ee9c996d2266d213eaefa29a73d09f8",
                 "shasum": ""
             },
             "require": {
@@ -1017,7 +1128,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Asset management for the SilverStripe CMS",
-            "time": "2017-07-05 21:18:05"
+            "time": "2017-07-12 08:17:09"
         },
         {
             "name": "silverstripe/assets",
@@ -1025,12 +1136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-assets.git",
-                "reference": "70c4eb79779dfd63171e05107b303b953eb456ca"
+                "reference": "a8c2cd1f420a1d1ba52be23e1838abb748f7a9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-assets/zipball/70c4eb79779dfd63171e05107b303b953eb456ca",
-                "reference": "70c4eb79779dfd63171e05107b303b953eb456ca",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-assets/zipball/a8c2cd1f420a1d1ba52be23e1838abb748f7a9eb",
+                "reference": "a8c2cd1f420a1d1ba52be23e1838abb748f7a9eb",
                 "shasum": ""
             },
             "require": {
@@ -1076,7 +1187,7 @@
                 "assets",
                 "silverstripe"
             ],
-            "time": "2017-07-05 04:00:14"
+            "time": "2017-07-13 09:20:12"
         },
         {
             "name": "silverstripe/blog",
@@ -1139,16 +1250,16 @@
         },
         {
             "name": "silverstripe/campaign-admin",
-            "version": "1.x-dev",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-campaign-admin.git",
-                "reference": "a772c8ff82915285b8dafb79a1233fdff31c3ab3"
+                "reference": "59f4f6b969f853c7caafbab3fd7d12bd9565e472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-campaign-admin/zipball/a772c8ff82915285b8dafb79a1233fdff31c3ab3",
-                "reference": "a772c8ff82915285b8dafb79a1233fdff31c3ab3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-campaign-admin/zipball/59f4f6b969f853c7caafbab3fd7d12bd9565e472",
+                "reference": "59f4f6b969f853c7caafbab3fd7d12bd9565e472",
                 "shasum": ""
             },
             "require": {
@@ -1160,12 +1271,6 @@
                 "phpunit/phpunit": "~4.8"
             },
             "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "1.x-dev": "1.0.x-dev",
-                    "dev-master": "2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "SilverStripe\\CampaignAdmin\\": "src/",
@@ -1194,7 +1299,7 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2017-07-05 04:19:04"
+            "time": "2017-07-03T05:17:40+00:00"
         },
         {
             "name": "silverstripe/cms",
@@ -1202,12 +1307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "b1c35c70b2be3d9e5d89798b8b636f61292d6918"
+                "reference": "1cf8a67f21563c99044bccd78af6c7f02b1ebb81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/b1c35c70b2be3d9e5d89798b8b636f61292d6918",
-                "reference": "b1c35c70b2be3d9e5d89798b8b636f61292d6918",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/1cf8a67f21563c99044bccd78af6c7f02b1ebb81",
+                "reference": "1cf8a67f21563c99044bccd78af6c7f02b1ebb81",
                 "shasum": ""
             },
             "require": {
@@ -1258,7 +1363,7 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2017-07-05 21:22:13"
+            "time": "2017-07-13 09:20:00"
         },
         {
             "name": "silverstripe/config",
@@ -1266,12 +1371,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-config.git",
-                "reference": "99dafe8b91b61dbc1cd7995c4e55b08dbdbbf57e"
+                "reference": "e8e0582909ae8f7c9d6b50facf2d25a102871f32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-config/zipball/99dafe8b91b61dbc1cd7995c4e55b08dbdbbf57e",
-                "reference": "99dafe8b91b61dbc1cd7995c4e55b08dbdbbf57e",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-config/zipball/e8e0582909ae8f7c9d6b50facf2d25a102871f32",
+                "reference": "e8e0582909ae8f7c9d6b50facf2d25a102871f32",
                 "shasum": ""
             },
             "require": {
@@ -1303,7 +1408,7 @@
                 "BSD-3-Clause"
             ],
             "description": "SilverStripe configuration based on YAML and class statics",
-            "time": "2017-07-05 21:06:33"
+            "time": "2017-07-13 01:21:08"
         },
         {
             "name": "silverstripe/errorpage",
@@ -1368,12 +1473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "0b09a510f4f3324f9e3694c73f605ab90fc9e680"
+                "reference": "3e97b99e2222c8b6201b1620cab35abf4c64601b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/0b09a510f4f3324f9e3694c73f605ab90fc9e680",
-                "reference": "0b09a510f4f3324f9e3694c73f605ab90fc9e680",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/3e97b99e2222c8b6201b1620cab35abf4c64601b",
+                "reference": "3e97b99e2222c8b6201b1620cab35abf4c64601b",
                 "shasum": ""
             },
             "require": {
@@ -1472,7 +1577,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2017-07-06 21:15:41"
+            "time": "2017-07-13 21:20:58"
         },
         {
             "name": "silverstripe/googlesitemaps",
@@ -3744,7 +3849,6 @@
         "silverstripe/admin": 20,
         "silverstripe/asset-admin": 20,
         "silverstripe/assets": 20,
-        "silverstripe/campaign-admin": 20,
         "silverstripe/cms": 20,
         "silverstripe/config": 20,
         "silverstripe/errorpage": 20,
@@ -3755,7 +3859,9 @@
         "silverstripe/versioned": 20,
         "silverstripe/googlesitemaps": 20,
         "silverstripe/blog": 20,
-        "tractorcow/silverstripe-colorpicker": 20
+        "tractorcow/silverstripe-colorpicker": 20,
+        "mak001/portfolio": 20,
+        "mak001/portfolio-theme": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
