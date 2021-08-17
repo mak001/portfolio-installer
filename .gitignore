@@ -1,44 +1,9 @@
-#eclipse
-.project
-
-# ignore cache folder
 /silverstripe-cache/
-
-# ignore all environment files
-_ss_environment.php
-
-# ignore build tools
-/tools/phing-metadata
-
-# ignore composer vendor folder
+/.env
 /vendor/
+/themes/simple/
+/_resources/
+/public/_resources/
 
-#ignore assets
-/assets/
-
-#ignores error logs
-*.log
-
-#ignore module stuff
-/portfolio/
-/cms/
-/framework/
-/reports/
-/siteconfig/
-/themes/
-/mysite/_config/recaptcha.yml
-
-/tinymce4/
-/better-image/
-/colorpicker/
-/breadcrumbnavigation/
-/googleanalytics/
-/googlesitemaps/
-/silverstripe-trailing-slash/
-/blog/
-/comments/
-/lumberjack/
-/tagfield/
-/gridfield-bulk-editing-tools/
-/recaptcha/
-/spamprotection/
+.idea
+docker-compose.yml
