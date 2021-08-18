@@ -32,6 +32,12 @@ class Project extends \Page
     private static $allowed_children = 'none';
 
     /**
+     * @var string
+     * @config
+     */
+    private static $table_name = 'Project';
+
+    /**
      * @var string[]
      * @config
      */

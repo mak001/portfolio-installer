@@ -28,6 +28,12 @@ use TractorCow\Colorpicker\Forms\ColorField;
 class Uses extends DataObject
 {
     /**
+     * @var string
+     * @config
+     */
+    private static $table_name = 'ProjectUses';
+
+    /**
      * @var string[]
      * @config
      */
@@ -36,7 +42,7 @@ class Uses extends DataObject
         'BackgroundColor' => 'Color',
         'ForegroundColor' => 'Varchar',
         'URLSegment' => 'Varchar',
-        'Description' => 'Text'
+        'Description' => 'Text',
     ];
 
     /**
@@ -62,8 +68,10 @@ class Uses extends DataObject
     private static $indexes = [
         "URLSegment" => [
             'type' => 'unique',
-            'value' => 'URLSegment'
-        ]
+            'columns' => [
+                'URLSegment',
+            ],
+        ],
     ];
 
     /**

@@ -4,6 +4,13 @@ namespace Mak001\Portfolio\Model\Project;
 
 class Framework extends Uses
 {
+
+    /**
+     * @var string
+     * @config
+     */
+    private static $table_name = 'Framework';
+
     /**
      * @return string
      */

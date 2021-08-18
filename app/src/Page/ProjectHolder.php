@@ -4,6 +4,13 @@ namespace Mak001\Portfolio\Page;
 
 class ProjectHolder extends \Page
 {
+
+    /**
+     * @var string
+     * @config
+     */
+    private static $table_name = 'ProjectHolder';
+
     /**
      * @var string[]
      * @config

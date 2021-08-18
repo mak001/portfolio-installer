@@ -5,6 +5,12 @@ namespace Mak001\Portfolio\Model\Project;
 class Language extends Uses
 {
     /**
+     * @var string
+     * @config
+     */
+    private static $table_name = 'Language';
+
+    /**
      * @return string
      */
     public function Link(): string
