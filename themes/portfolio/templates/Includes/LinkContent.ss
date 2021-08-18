@@ -1,0 +1,1 @@
+<a href="$URL" class="$ExtraClasses" title="$Title"><% if $Icon %><span class="fa $Icon icon" title="$Title" aria-hidden="true"></span><span class="sr-only">$Title</span><% else %>$Title<% end_if %></a>

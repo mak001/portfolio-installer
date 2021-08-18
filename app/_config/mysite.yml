@@ -4,6 +4,10 @@ Name: myproject
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
 
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Mak001\Portfolio\ORM\SiteConfigExtension
+
 # UTF8MB4 has limited support in older MySQL versions.
 # Remove this configuration if you experience issues.
 ---
