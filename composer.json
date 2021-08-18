@@ -8,8 +8,7 @@
         "silverstripe/recipe-cms": "4.8.0@stable",
         "silverstripe/login-forms": "4.4.1@stable",
         "isaacdanielreyna/retrowave-theme": "dev-master",
-        "tractorcow/silverstripe-colorpicker": "^4.1",
-        "silverstripe/userforms": "^5.9"
+        "tractorcow/silverstripe-colorpicker": "^4.1"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",

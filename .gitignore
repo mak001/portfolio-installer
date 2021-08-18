@@ -1,9 +1,10 @@
 /silverstripe-cache/
 /.env
 /vendor/
-/themes/simple/
+/themes/retrowave-theme/
 /_resources/
 /public/_resources/
+/public/resources/
 
 .idea
 docker-compose.yml
