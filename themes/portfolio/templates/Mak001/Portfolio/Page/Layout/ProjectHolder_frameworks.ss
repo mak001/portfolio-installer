@@ -1,23 +1,16 @@
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <% if $Framework %>
-            $Description
-            <% if $PaginatedProjects %>
+
+    <% if $Framework %>
+        <div class="content">$Description</div>
+        <% if $PaginatedProjects %>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
                 <% loop $PaginatedProjects %>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">$Title</h5>
-                                <p class="card-text">$Teaser</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="$Link" class="btn btn-dark" title="$Title Projects">Projects</a>
-                            </div>
-                        </div>
-                    </div>
+                    <% include ProjectCard %>
                 <% end_loop %>
-            <% end_if %>
-        <% else_if $PaginatedFrameworks %>
+            </div>
+        <% end_if %>
+    <% else_if $PaginatedFrameworks %>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             <% loop $PaginatedFrameworks %>
                 <div class="col">
                     <div class="card h-100">
@@ -31,6 +24,6 @@
                     </div>
                 </div>
             <% end_loop %>
-        <% end_if %>
-    </div>
+        </div>
+    <% end_if %>
 </div>
