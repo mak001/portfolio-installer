@@ -2,11 +2,11 @@
     <div class="row mb-3">
         <div class="col-sm-12 btn-group btn-group-lg">
             <a href="$Link" class="btn btn-outline-dark">Projects</a>
-            <a href="$LanguageLink" class="btn btn-outline-dark">Languages</a>
-            <span class="btn btn-outline-dark active">Frameworks</span>
+            <span class="btn btn-outline-dark active">Languages</span>
+            <a href="$FrameworkLink" class="btn btn-outline-dark">Frameworks</a>
         </div>
     </div>
-    <% if $Framework %>
+    <% if $Language %>
         <div class="row">
             <div class="col-sm-12">
                 <div class="content">$Description</div>
@@ -19,9 +19,9 @@
                 <% end_loop %>
             </div>
         <% end_if %>
-    <% else_if $PaginatedFrameworks %>
+    <% else_if $PaginatedLanguages %>
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <% loop $PaginatedFrameworks %>
+            <% loop $PaginatedLanguages %>
                 <div class="col">
                     <div class="card h-100">
                         <div class="card-body">
