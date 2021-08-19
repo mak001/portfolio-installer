@@ -8,7 +8,12 @@
         "silverstripe/recipe-cms": "4.8.0@stable",
         "silverstripe/login-forms": "4.4.1@stable",
         "isaacdanielreyna/retrowave-theme": "dev-master",
-        "tractorcow/silverstripe-colorpicker": "^4.1"
+        "dnadesign/silverstripe-elemental": "^4.6",
+        "dynamic/silverstripe-elemental-embedded-code": "^2.0",
+        "dynamic/silverstripe-elemental-flexslider": "^2.0",
+        "dynamic/silverstripe-elemental-gallery": "^2.0",
+        "dynamic/silverstripe-elemental-image": "^2.0",
+        "dynamic/silverstripe-elemental-markdown": "^1.0"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",

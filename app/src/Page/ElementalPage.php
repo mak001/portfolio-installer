@@ -7,13 +7,14 @@ use DNADesign\Elemental\Extensions\ElementalPageExtension;
 /**
  * @mixin ElementalPageExtension
  */
-class ResumePage extends \Page
+class ElementalPage extends \Page
 {
+
     /**
      * @var string
      * @config
      */
-    private static $table_name = 'ResumePage';
+    private static $table_name = 'ElementalPage';
 
     /**
      * @var string[]

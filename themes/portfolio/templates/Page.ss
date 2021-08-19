@@ -27,7 +27,7 @@
 <banner>
     <div class="container">
         <div>$Title</div>
-        <% if $ParentID %><div class="breadcrumbs">$Breadcrumbs</div><% end_if %>
+        <% if $BreadcrumbItems.Count > 1 %><div class="breadcrumbs">$Breadcrumbs</div><% end_if %>
     </div>
 </banner>
 

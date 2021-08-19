@@ -14,6 +14,9 @@
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
                 <div class="card-footer">
+                    <% loop $Sources %>
+                    <% include LinkContent %>
+                    <% end_loop %>
                     <small class="text-muted">Last updated 3 mins ago</small>
                 </div>
             </div>
