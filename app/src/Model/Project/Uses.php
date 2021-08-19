@@ -10,8 +10,6 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ManyManyList;
-use TractorCow\Colorpicker\Color;
-use TractorCow\Colorpicker\Forms\ColorField;
 
 /**
  * @property string Title
@@ -20,7 +18,6 @@ use TractorCow\Colorpicker\Forms\ColorField;
  * @property string URLSegment
  * @property string Description
  *
- * @property int ProjectHolderID
  * @method ProjectHolder ProjectHolder()
  *
  * @method ManyManyList|Project[] Projects()
@@ -39,26 +36,8 @@ class Uses extends DataObject
      */
     private static $db = [
         'Title' => 'Varchar',
-        'BackgroundColor' => 'Color',
-        'ForegroundColor' => 'Varchar',
         'URLSegment' => 'Varchar',
         'Description' => 'Text',
-    ];
-
-    /**
-     * @var string[]
-     * @config
-     */
-    private static $has_one = [
-        'ProjectHolder' => ProjectHolder::class,
-    ];
-
-    /**
-     * @var string[]
-     * @config
-     */
-    private static $belongs_many_many = [
-        'Projects' => Project::class,
     ];
 
     /**
@@ -90,7 +69,6 @@ class Uses extends DataObject
         return FieldList::create(array(
             TextField::create('Title'),
             $urlSegment,
-            new ColorField('BackgroundColor', 'Background Color'),
             TextareaField::create('Description')
         ));
     }
@@ -112,32 +90,29 @@ class Uses extends DataObject
     }
 
     /**
-     * @inheritDoc
+     * Get the title for use in menus for this page. If the MenuTitle field is set it returns that, else it returns the
+     * Title field.
+     *
+     * @return string
      */
-    public function onBeforeWrite()
+    public function getMenuTitle()
     {
-        parent::onBeforeWrite();
-        $this->ForegroundColor = $this->getTextColorStyle($this->BackgroundColor);
+        return $this->getField('Title');
     }
 
     /**
-     * originally from ColorField
-     *
-     * @param string $color
-     * @return string
+     * @return DataObject|ProjectHolder|null
      */
-    public function getTextColorStyle(string $color): string
+    public function getProjectHolder(): DataObject
     {
-        // change alpha component depending on disabled state
-        if ($color) {
-            list($R, $G, $B) = Color::HEX_TO_RGB($color);
-            $luminance = Color::RGB_TO_LUMINANCE($R, $G, $B);
-            // return color as hex and as rgba values (hex is fallback for IE-8)
-            return ($luminance > 0.5) ?
-                'color: #000; color: rgba(0, 0, 0, 1);' :
-                'color: #fff; color: rgba(255, 255, 255, 1);';
-        }
-        return 'color: #000; color: rgba(0, 0, 0, 1);';
+        return ProjectHolder::get()->first();
     }
 
+    /**
+     * @return int
+     */
+    public function getPageLevel()
+    {
+        return $this->getProjectHolder()->getPageLevel() + 2;
+    }
 }

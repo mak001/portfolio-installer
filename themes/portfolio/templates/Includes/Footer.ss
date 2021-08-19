@@ -3,7 +3,7 @@
 
     <div class="links">
         <% loop $SiteConfig.Links %>
-            <% include LinkContent %>
+            <% include FooterLinkContent %>
         <% end_loop %>
     </div>
 </footer>

@@ -34,9 +34,6 @@ class Link extends DataObject
         'Title' => 'Varchar',
         'Icon' => 'Varchar',
         'URL' => 'Varchar',
-        'Button' => 'Boolean',
-        'Outline' => 'Boolean',
-        'Dark' => 'Boolean',
     ];
 
     /**
@@ -56,32 +53,5 @@ class Link extends DataObject
             );
         });
         return parent::getCMSFields();
-    }
-
-    public function getExtraClasses()
-    {
-        $classes = [];
-        if ($this->Button) {
-            $classes[] = 'btn';
-
-            if ($this->Dark) {
-                $classes[] = 'btn-dark';
-            }
-        } else {
-            $classes[] = 'display-6';
-            if (!$this->Dark) {
-                $classes[] = 'text-white';
-            }
-        }
-
-        if ($this->Outline) {
-            if ($this->Dark) {
-                $classes[] = 'btn-outline-light';
-            } else {
-                $classes[] = 'btn-outline-dark';
-            }
-        }
-
-        return implode(' ', $classes);
     }
 }
