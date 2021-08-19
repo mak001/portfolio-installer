@@ -33,6 +33,8 @@
             ".htaccess",
             "index.php",
             "web.config"
+        ],"expose": [
+            "themes/portfolio/images"
         ]
     },
     "config": {
