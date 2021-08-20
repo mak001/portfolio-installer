@@ -43,9 +43,6 @@
                 </div>
             </div>
         </div>
-        <a href="$Link" class="text-decoration-none text-muted text-center">
-            <div class="card-footer">Read More</div>
-        </a>
         <% if $Sources %>
             <% loop $Sources %>
                 <a href="$URL" class="text-decoration-none text-muted text-center" target="_blank">
@@ -53,5 +50,8 @@
                 </a>
             <% end_loop %>
         <% end_if %>
+        <a href="$Link" class="text-decoration-none text-body text-center">
+            <div class="card-footer">Read More</div>
+        </a>
     </div>
 </div>
