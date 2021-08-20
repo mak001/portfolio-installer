@@ -3,25 +3,23 @@
 namespace Mak001\Portfolio\Model;
 
 use Mak001\Portfolio\Page\ResumePage;
-use \SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\DataObject;
 
 /**
  * @property string Title
- * @property string Location
- * @property string Degree
- * @property string Graduated
- * @property string Honors
+ * @property string Description
  *
  * @property int ResumeID
  * @method ResumePage Resume
  */
-class School extends DataObject
+class Skill extends DataObject
 {
+
     /**
      * @var string
      * @config
      */
-    private static $table_name = 'School';
+    private static $table_name = 'Skill';
 
     /**
      * @var string[]
@@ -29,10 +27,7 @@ class School extends DataObject
      */
     private static $db = [
         'Title' => 'Varchar',
-        'Location' => 'Varchar',
-        'Degree' => 'Varchar',
-        'Graduated' => 'Varchar',
-        'Honors' => 'Varchar',
+        'Description' => 'HTMLText',
     ];
 
     /**
