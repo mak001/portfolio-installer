@@ -13,7 +13,7 @@
             </a>
             <p class="card-text">$Description</p>
         </div>
-        <a href="$Link" class="text-decoration-none text-muted text-center">
+        <a href="$Link" class="text-decoration-none text-body text-center">
             <div class="card-footer">Projects</div>
         </a>
     </div>
