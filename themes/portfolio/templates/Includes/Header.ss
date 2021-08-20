@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-purple box-shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-purple box-shadow sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="$BaseHref" rel="home">$SiteConfig.Title</a>
 

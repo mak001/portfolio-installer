@@ -30,7 +30,13 @@
         <% if $BreadcrumbItems.Count > 1 %><div class="breadcrumbs">$Breadcrumbs</div><% end_if %>
     </div>
 </banner>
-
+<%-- if $ClassName.ShortName == 'Project' %>
+    <% if $MainPhoto %>
+        <img src="$MainPhoto.Fill(510, 200).URL" class="img-fluid" width="100%">
+    <% else %>
+        <img src="$ThemeDir/images/code.png" class="img-fluid" width="100%">
+    <% end_if %>
+<% end_if --%>
 <div class="main" role="main">
     <div class="inner typography line">
         $Layout
