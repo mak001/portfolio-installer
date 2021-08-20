@@ -4,6 +4,7 @@ namespace Mak001\Portfolio\Model\Project;
 
 use Mak001\Portfolio\Page\Project;
 use Mak001\Portfolio\Page\ProjectHolder;
+use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Forms\SiteTreeURLSegmentField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
@@ -18,7 +19,7 @@ use SilverStripe\ORM\ManyManyList;
  * @property string URLSegment
  * @property string Description
  *
- * @method ProjectHolder ProjectHolder()
+ * @method Image Image()
  *
  * @method ManyManyList|Project[] Projects()
  */
@@ -41,6 +42,22 @@ class Uses extends DataObject
     ];
 
     /**
+     * @var string[]
+     * @config
+     */
+    private static $has_one = [
+        'Image' => Image::class,
+    ];
+
+    /**
+     * @var string[]
+     * @config
+     */
+    private static $owns = [
+        'Image'
+    ];
+
+    /**
      * @var string[][]
      * @config
      */
@@ -58,19 +75,23 @@ class Uses extends DataObject
      */
     public function getCMSFields(): FieldList
     {
-        $urlSegment = new SiteTreeURLSegmentField("URLSegment", $this->fieldLabel('URLSegment'));
+        $this->beforeUpdateCMSFields(function(FieldList $fields) {
+            $urlSegment = new SiteTreeURLSegmentField("URLSegment", $this->fieldLabel('URLSegment'));
 
-        $prefix = $this->getAbsoluteLURL();
-        $urlSegment->setURLPrefix($prefix);
+            $prefix = $this->getAbsoluteLURL();
+            $urlSegment->setURLPrefix($prefix);
 
-        $helpText = _t('SiteTreeURLSegmentField.HelpChars', ' Special characters are automatically converted or removed.');
-        $urlSegment->setHelpText($helpText);
+            $helpText = _t('SiteTreeURLSegmentField.HelpChars', ' Special characters are automatically converted or removed.');
+            $urlSegment->setHelpText($helpText);
 
-        return FieldList::create(array(
-            TextField::create('Title'),
-            $urlSegment,
-            TextareaField::create('Description')
-        ));
+            $fields->addFieldsToTab('Root.Main', [
+                TextField::create('Title'),
+                $urlSegment,
+                TextareaField::create('Description')
+            ]);
+        });
+
+        return parent::getCMSFields();
     }
 
     /**

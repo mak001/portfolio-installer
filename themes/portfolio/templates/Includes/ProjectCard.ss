@@ -2,7 +2,7 @@
     <div class="card h-100">
         <a href="$Link" class="card-img-top">
             <% if $MainPhoto %>
-                <img src="$MainPhoto.Fill(510, 200)" class="card-img-top rounded-top-md">
+                <img src="$MainPhoto.Fill(510, 200).URL" class="card-img-top rounded-top-md">
             <% else %>
                 <img src="$ThemeDir/images/code.png" class="card-img-top rounded-top-md">
             <% end_if %>

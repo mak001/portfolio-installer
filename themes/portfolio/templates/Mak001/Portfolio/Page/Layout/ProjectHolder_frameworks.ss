@@ -3,7 +3,11 @@
         <div class="col-sm-12 btn-group btn-group-lg">
             <a href="$Link" class="btn btn-outline-dark">Projects</a>
             <a href="$LanguageLink" class="btn btn-outline-dark">Languages</a>
+            <% if $Framework %>
+                <a href="$FrameworkLink" class="btn btn-outline-dark active">Frameworks</a>
+            <% else %>
             <span class="btn btn-outline-dark active">Frameworks</span>
+            <% end_if %>
         </div>
     </div>
     <% if $Framework %>
@@ -13,26 +17,16 @@
             </div>
         </div>
         <% if $PaginatedProjects %>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">
                 <% loop $PaginatedProjects %>
                     <% include ProjectCard %>
                 <% end_loop %>
             </div>
         <% end_if %>
     <% else_if $PaginatedFrameworks %>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 justify-content-center g-4">
             <% loop $PaginatedFrameworks %>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">$Title</h5>
-                            <p class="card-text">$Description</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="$Link" class="btn btn-dark" title="$Title Projects">Projects</a>
-                        </div>
-                    </div>
-                </div>
+                <% include UsesCard %>
             <% end_loop %>
         </div>
     <% end_if %>

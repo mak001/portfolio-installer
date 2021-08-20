@@ -11,7 +11,7 @@
             <div class="content">$Content</div>
         </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">
         <% loop $PaginatedProjects %>
             <% include ProjectCard %>
         <% end_loop %>
