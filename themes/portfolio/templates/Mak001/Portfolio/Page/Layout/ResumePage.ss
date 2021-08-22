@@ -23,6 +23,25 @@
                     <% end_loop %>
                 </ul>
             <% end_if %>
+            <% if $Skills %>
+                <h3 class="text-center">Skills</h3>
+                <ul>
+                    <% loop $Skills %>
+                        <li>$Title<% if $Description %>$Description<% end_if %></li>
+                    <% end_loop %>
+                </ul>
+            <% end_if %>
+            <% if $Jobs %>
+                <h3 class="text-center">Experience</h3>
+                <div>
+                    <% loop $Jobs %>
+                        <div class="mb-5">
+                            <p><i>$Title</i>, <a href="$CompanyURL">$CompanyName</a>, $Location ($StartDate<% if $EndDate %> - $EndDate<% end_if %>)</p>
+                            $Description
+                        </div>
+                    <% end_loop %>
+                </div>
+            <% end_if %>
         </div>
     </div>
 </div>
