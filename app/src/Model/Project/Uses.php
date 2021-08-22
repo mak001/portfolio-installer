@@ -71,6 +71,14 @@ class Uses extends DataObject
     ];
 
     /**
+     * @var string[]
+     * @config
+     */
+    private static $summary_fields = [
+        'Title',
+    ];
+
+    /**
      * @inheritDoc
      */
     public function getCMSFields(): FieldList

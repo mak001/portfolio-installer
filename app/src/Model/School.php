@@ -42,4 +42,13 @@ class School extends DataObject
     private static $has_one = [
         'Resume' => ResumePage::class,
     ];
+
+    /**
+     * @var string[]
+     * @config
+     */
+    private static $summary_fields = [
+        'Title',
+        'Degree',
+    ];
 }
