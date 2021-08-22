@@ -19,11 +19,15 @@
                             Languages
                         </div>
                         <ul class="list-group list-group-flush">
-                            <% loop $Languages %>
-                                <li class="list-group-item">
-                                    <a href="$Link" class="text-decoration-none text-body">$Title</a>
-                                </li>
-                            <% end_loop %>
+                            <% if $Languages %>
+                                <% loop $Languages %>
+                                    <li class="list-group-item">
+                                        <a href="$Link" class="text-decoration-none text-body">$Title</a>
+                                    </li>
+                                <% end_loop %>
+                            <% else %>
+                                <li class="list-group-item">None</li>
+                            <% end_if %>
                         </ul>
                     </div>
                 </div>
@@ -33,11 +37,15 @@
                             Frameworks
                         </div>
                         <ul class="list-group list-group-flush">
-                            <% loop $Frameworks %>
-                                <li class="list-group-item">
-                                    <a href="$Link" class="text-decoration-none text-body">$Title</a>
-                                </li>
-                            <% end_loop %>
+                            <% if $Frameworks %>
+                                <% loop $Frameworks %>
+                                    <li class="list-group-item">
+                                        <a href="$Link" class="text-decoration-none text-body">$Title</a>
+                                    </li>
+                                <% end_loop %>
+                            <% else %>
+                                <li class="list-group-item">None</li>
+                            <% end_if %>
                         </ul>
                     </div>
                 </div>
