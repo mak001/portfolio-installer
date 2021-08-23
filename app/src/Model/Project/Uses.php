@@ -6,6 +6,7 @@ use Mak001\Portfolio\Page\Project;
 use Mak001\Portfolio\Page\ProjectHolder;
 use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Forms\SiteTreeURLSegmentField;
+use SilverStripe\Control\Director;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
@@ -83,7 +84,7 @@ class Uses extends DataObject
      */
     public function getCMSFields(): FieldList
     {
-        $this->beforeUpdateCMSFields(function(FieldList $fields) {
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $urlSegment = new SiteTreeURLSegmentField("URLSegment", $this->fieldLabel('URLSegment'));
 
             $prefix = $this->getAbsoluteLURL();
@@ -116,6 +117,14 @@ class Uses extends DataObject
     public function getAbsoluteLURL(): string
     {
         return '';
+    }
+
+    /**
+     * @return false|string
+     */
+    public function AbsoluteLink()
+    {
+        return Director::absoluteURL($this->Link());
     }
 
     /**
