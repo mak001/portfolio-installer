@@ -8,6 +8,12 @@ SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - Mak001\Portfolio\ORM\SiteConfigExtension
 
+Wilr\GoogleSitemaps\GoogleSitemap:
+  enabled: true
+  objects_per_sitemap: 1000
+  google_notification_enabled: false
+  use_show_in_search: true
+
 # UTF8MB4 has limited support in older MySQL versions.
 # Remove this configuration if you experience issues.
 ---

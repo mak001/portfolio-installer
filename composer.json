@@ -15,7 +15,8 @@
         "dynamic/silverstripe-elemental-image": "^2.0",
         "dynamic/silverstripe-elemental-markdown": "^1.0",
         "dnadesign/silverstripe-elemental-userforms": "^3.0",
-        "axllent/silverstripe-bootstrap-forms": "^2.0"
+        "axllent/silverstripe-bootstrap-forms": "^2.0",
+        "wilr/silverstripe-googlesitemaps": "^2.2"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",
