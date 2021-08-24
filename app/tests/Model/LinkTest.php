@@ -5,7 +5,6 @@ namespace Mak001\Portfolio\Test\Model;
 use Mak001\Portfolio\Model\Link;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\HiddenField;
 use SilverStripe\ORM\ValidationException;
 
 class LinkTest extends SapphireTest

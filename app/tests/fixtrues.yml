@@ -47,3 +47,7 @@ Mak001\Portfolio\Model\Link:
   google:
     Title: Google
     URL: 'https://google.com'
+
+Mak001\Portfolio\Page\Project:
+  portfolio:
+    Title: 'portfolio'
