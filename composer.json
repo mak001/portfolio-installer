@@ -21,23 +21,20 @@
     "require-dev": {
         "sminnee/phpunit": "^5.7",
         "sminnee/phpunit-mock-objects": "^3.4.5",
-        "webbuilders-group/silverstripe-recipe-github-ci": "^1.0"
+        "ergebnis/composer-normalize": "^2.15",
+        "lekoala/silverstripe-debugbar": "^2.0",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpmd/phpmd": "^2.10"
     },
     "extra": {
         "resources-dir": "_resources",
         "project-files-installed": [
-            ".github/workflows/ci.yml",
             "app/.htaccess",
             "app/_config.php",
             "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
-            "app/src/PageController.php",
-            "app/tests/PHPUnit/.gitignore",
-            "app/tests/behat/features/.gitignore",
-            "behat.yml",
-            "phpcs.xml.dist",
-            "phpunit.xml.dist"
+            "app/src/PageController.php"
         ],
         "public-files-installed": [
             ".htaccess",
