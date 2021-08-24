@@ -1,0 +1,49 @@
+SilverStripe\Security\Group:
+  administrators:
+    Title: "Administrators"
+  site-owners:
+    Title: "Site Owners"
+  nopermission:
+    Title: "No Permission"
+
+SilverStripe\Security\Permission:
+  administrators:
+    Code: ADMIN
+    Type: 1
+    Group: =>SilverStripe\Security\Group.administrators
+  home:
+    Code: HomePage_CRUD
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  campaign:
+    Code: CamLan_CRUD
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  search:
+    Code: SearchPage_CRUD
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+
+SilverStripe\Security\Member:
+  admin:
+    FirstName: "Default"
+    Surname: "Admin"
+    Email: "defaultadmin"
+    Password: "dev"
+    Groups: =>SilverStripe\Security\Group.administrators
+  site-owner:
+    FirstName: "Site"
+    Surname: "Owner"
+    Email: "owner"
+    Password: "owner"
+    Groups: =>SilverStripe\Security\Group.site-owners
+  nopermission:
+    FirstName: No
+    Surname: Permission
+    Email: nopermission@test.com
+    Groups: =>SilverStripe\Security\Group.nopermission
+
+Mak001\Portfolio\Model\Link:
+  google:
+    Title: Google
+    URL: 'https://google.com'

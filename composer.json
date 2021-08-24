@@ -48,6 +48,12 @@
             "themes/portfolio/images"
         ]
     },
+    "autoload": {
+        "psr-4": {
+            "Mak001\\Portfolio\\": "app/src/",
+            "Mak001\\Portfolio\\Test\\": "app/tests/"
+        }
+    },
     "config": {
         "process-timeout": 600
     },

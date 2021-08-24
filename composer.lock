@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8a48f78ce58e217adb9dc6c78e5591d",
+    "content-hash": "350be97b749d864f20e1ffa641b5b75e",
     "packages": [
         {
             "name": "axllent/silverstripe-bootstrap-forms",

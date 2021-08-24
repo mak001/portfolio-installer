@@ -4,6 +4,8 @@ namespace Mak001\Portfolio\Model;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HiddenField;
+use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validator;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\SiteConfig\SiteConfig;
 
@@ -44,7 +46,10 @@ class Link extends DataObject
         'SiteConfig' => SiteConfig::class,
     ];
 
-    public function getCMSFields()
+    /**
+     * @inheritDoc
+     */
+    public function getCMSFields(): FieldList
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $fields->addFieldToTab(
@@ -53,5 +58,16 @@ class Link extends DataObject
             );
         });
         return parent::getCMSFields();
+    }
+
+    /**
+     * @return Validator
+     */
+    public function getCMSValidator(): Validator
+    {
+        return RequiredFields::create([
+            'Title',
+            'URL',
+        ]);
     }
 }
