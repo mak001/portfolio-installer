@@ -20,8 +20,8 @@ jobs:
       mysql:
         image: "mysql:5.7"
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: testpassword
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD:
           MYSQL_DATABASE: test_db
         ports:
           - 3306/tcp
@@ -58,13 +58,25 @@ jobs:
       - name: "Install dependencies with composer"
         run: "composer install --no-ansi --no-interaction --no-progress"
 
-      - name: 'Configure Environment'
-        run: 'cp vendor/webbuilders-group/silverstripe-recipe-github-ci/utils/actions.env.template .env'
-
       - name: "Run tests with phpunit/phpunit"
         env:
           SS_DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
-        run: "vendor/bin/phpunit"
+        run: "vendor/bin/phpunit --coverage-html=build/logs/coverage --coverage-xml=build/logs/coverage"
+
+      - name: "Archive code coverage results"
+        uses: "actions/upload-artifact@v2"
+        with:
+          name: "coverage"
+          path: "build/logs/coverage/"
 
       - name: "Run tests with squizlabs/php_codesniffer"
-        run: "vendor/bin/phpcs -s --report=summary --standard=phpcs.xml.dist --extensions=php,inc --ignore=autoload.php --ignore=vendor/ app/src/ app/tests/ || exit 0"
+        run: "vendor/bin/phpcs -s --report=summary --standard=phpcs.xml.dist --extensions=php,inc --ignore=autoload.php --ignore=vendor/ app/src/ app/tests/"
+
+      - name: "Run tests with phpmd/phpmd"
+        run: "vendor/bin/phpmd app/src html codesize,unusedcode,naming --reportfile build/logs/phpmd.html --exclude vendor/ --exclude autoload.php || exit 0"
+
+      - name: "Archive phpmd results"
+        uses: "actions/upload-artifact@v2"
+        with:
+          name: "phpmd"
+          path: "build/logs/phpmd.html"
