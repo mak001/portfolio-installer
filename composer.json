@@ -3,12 +3,9 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": "^7.1 || ^8",
-        "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "4.8.0@stable",
-        "silverstripe/login-forms": "4.4.1@stable",
-        "isaacdanielreyna/retrowave-theme": "dev-master",
-        "dnadesign/silverstripe-elemental": "^4.6",
+        "php": "^7.1",
+        "silverstripe/recipe-cms": "^4.8",
+        "dnadesign/silverstripe-elemental": "^4",
         "dynamic/silverstripe-elemental-embedded-code": "^2.0",
         "dynamic/silverstripe-elemental-flexslider": "^2.0",
         "dynamic/silverstripe-elemental-gallery": "^2.0",
@@ -21,10 +18,8 @@
     "require-dev": {
         "sminnee/phpunit": "^5.7",
         "sminnee/phpunit-mock-objects": "^3.4.5",
-        "ergebnis/composer-normalize": "^2.15",
-        "lekoala/silverstripe-debugbar": "^2.0",
-        "squizlabs/php_codesniffer": "^3.6",
-        "phpmd/phpmd": "^2.10"
+        "squizlabs/php_codesniffer": "^3.0",
+        "lekoala/silverstripe-debugbar": "^2.0"
     },
     "extra": {
         "resources-dir": "_resources",
@@ -52,7 +47,13 @@
         }
     },
     "config": {
-        "process-timeout": 600
+        "process-timeout": 600,
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true,
+            "ergebnis/composer-normalize": true
+        }
     },
     "prefer-stable": true,
     "minimum-stability": "dev"
