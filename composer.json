@@ -3,7 +3,7 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": "^7.1",
+        "php": "^7.4",
         "silverstripe/recipe-cms": "^4.8",
         "dnadesign/silverstripe-elemental": "^4",
         "dynamic/silverstripe-elemental-embedded-code": "^2.0",
@@ -13,7 +13,9 @@
         "dynamic/silverstripe-elemental-markdown": "^1.0",
         "dnadesign/silverstripe-elemental-userforms": "^3.0",
         "axllent/silverstripe-bootstrap-forms": "^2.0",
-        "wilr/silverstripe-googlesitemaps": "^2.2"
+        "wilr/silverstripe-googlesitemaps": "^2.2",
+        "isaacdanielreyna/retrowave-theme": "dev-master",
+        "innoweb/silverstripe-social-metadata": "^7.0"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",

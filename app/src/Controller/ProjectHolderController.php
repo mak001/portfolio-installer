@@ -173,6 +173,20 @@ class ProjectHolderController extends \PageController
     {
         return PaginatedList::create($this->getFrameworks(), $this->getRequest())
             ->setPageLength($num);
+    }
 
+    /**
+     * If the request should be shown in a table
+     *
+     * @param HTTPRequest|null $request
+     * @return void
+     */
+    public function getIsTable(HTTPRequest $request = null)
+    {
+        if ($request == null) {
+            $request = $this->getRequest();
+        }
+
+        return $request->getVar('table') == true;
     }
 }

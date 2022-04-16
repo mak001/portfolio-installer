@@ -3,6 +3,7 @@
 namespace Mak001\Portfolio\Page;
 
 use Mak001\Portfolio\Controller\ProjectHolderController;
+use Mak001\Portfolio\Model\Breadcrumb;
 use SilverStripe\Control\Controller;
 use SilverStripe\ORM\ArrayList;
 
@@ -62,12 +63,12 @@ class ProjectHolder extends \Page
         parent::onBeforeUpdateBreadcrumbItems($breadcrumbs);
         $controller = Controller::curr();
         if ($controller instanceof ProjectHolderController) {
-            $fakePage = \Page::create();
             if ($controller->getAction() == 'frameworks') {
-                $fakePage->Title = 'Frameworks';
-                $fakePage->URLSegment = 'frameworks';
-                $fakePage->ParentID = $this->ID;
-                $breadcrumbs->push($fakePage);
+                $breadcrumbs->push(new Breadcrumb(
+                    $this->FrameworkLink(),
+                    'Frameworks',
+                    $this->getPageLevel() + 1
+                ));
 
                 if ($framework = $controller->getFramework()) {
                     $breadcrumbs->push($framework);
@@ -75,10 +76,11 @@ class ProjectHolder extends \Page
             }
 
             if ($controller->getAction() == 'languages') {
-                $fakePage->Title = 'Languages';
-                $fakePage->URLSegment = 'languages';
-                $fakePage->ParentID = $this->ID;
-                $breadcrumbs->push($fakePage);
+                $breadcrumbs->push(new Breadcrumb(
+                    $this->LanguageLink(),
+                    'Languages',
+                    $this->getPageLevel() + 1
+                ));
 
                 if ($language = $controller->getLanguage()) {
                     $breadcrumbs->push($language);
