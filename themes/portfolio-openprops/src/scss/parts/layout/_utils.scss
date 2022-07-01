@@ -1,0 +1,32 @@
+.text-center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.no-decoration):not(.icon) {
+    background-image: linear-gradient(var(--brand), var(--brand));
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    transition: background-size 0.25s ease-in-out;
+
+    &:hover {
+        background-size: 100% 3px;
+    }
+}
+
+.icon {
+    transition: all 0.25s ease;
+
+    &:hover {
+        color: var(--brand);
+    }
+}
+
+.default-cursor {
+    cursor: default;
+}

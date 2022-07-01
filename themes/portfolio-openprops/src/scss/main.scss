@@ -1,0 +1,48 @@
+@use 'parts/theme';
+@use 'parts/layout/utils';
+@use 'parts/layout/header';
+@use 'parts/layout/footer';
+@use 'open-props/shadows';
+@use 'open-props/media';
+
+html {
+    block-size: 100%;
+    color: var(--text1);
+    accent-color: var(--brand);
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface1);
+}
+
+main {
+    flex-grow: 1;
+    max-inline-size: var(--size-xl);
+}
+
+header, main, footer {
+    padding: var(--size-4) var(--size-fluid-3);
+}
+
+pre, blockquote, p:not(blockquote > p) {
+    margin-top: var(--size-4);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    max-inline-size: 100%;
+}
+
+@media (--xl-n-above) {
+    header, main, footer {
+        margin: auto;
+        min-inline-size: var(--size-xl);
+        padding: var(--size-4) var(--size-fluid-6);
+    }
+
+    footer {
+        margin: 0;
+    }
+}

@@ -7,5 +7,8 @@
 /public/resources/
 
 .idea
+.vscode
 docker-compose.yml
 *.log
+**/node_modules/
+**/open-props/

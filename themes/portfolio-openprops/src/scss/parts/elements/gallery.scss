@@ -1,0 +1,68 @@
+.dynamic__elements__gallery__elements__elementphotogallery {
+
+    .lightbox {
+        /* Default to hidden */
+        display: none;
+
+        /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        /* A bit of padding around image */
+        padding: 1em;
+
+        /* Translucent background */
+        background: rgba(0, 0, 0, 0.8);
+
+        /* Unhide the lightbox when it's the target */
+        &:target {
+            display: block;
+        }
+
+        & span {
+            /* Full width and height */
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            /* Size and position background image */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+
+    a div {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+         &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(at top left, var(--brand) 0% 50%, transparent 50% 100%);
+            padding: var(--size-00);
+            top: -100%;
+            left: -100%;
+        }
+
+        &:hover::before {
+            top: 0%;
+            left: 0%;
+        }
+
+        img {
+            padding: var(--size-1);
+            position: relative;
+        }
+    }
+}

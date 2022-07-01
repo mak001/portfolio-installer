@@ -62,6 +62,14 @@ class Project extends \Page
      * @var string[]
      * @config
      */
+    private static $disallowed_elements = [
+        ElementContent::class,
+    ];
+
+    /**
+     * @var string[]
+     * @config
+     */
     private static $db = [
         'Teaser' => 'Text',
         'MainImageHasLogo' => 'Boolean',
@@ -85,6 +93,9 @@ class Project extends \Page
         'Sources' => Link::class,
     ];
 
+    /**
+     * @inheritDoc
+     */
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {

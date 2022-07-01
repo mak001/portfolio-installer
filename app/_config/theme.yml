@@ -4,6 +4,7 @@ Name: mytheme
 SilverStripe\View\SSViewer:
   themes:
     - '$public'
-    - 'portfolio'
-    - 'retrowave-theme'
+    - 'portfolio-openprops'
+#    - 'portfolio'
+#    - 'retrowave-theme'
     - '$default'
