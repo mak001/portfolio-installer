@@ -46,7 +46,7 @@
             content: "";
             display: block;
             position: absolute;
-            transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+            transition: top 0.5s cubic-bezier(.69,.3,.47,.86), left 0.5s cubic-bezier(.69,.3,.47,.86);
             width: 200%;
             height: 200%;
             background-image: radial-gradient(at top left, var(--brand) 0% 50%, transparent 50% 100%);
