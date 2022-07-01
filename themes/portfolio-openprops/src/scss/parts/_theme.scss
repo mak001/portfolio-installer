@@ -1,0 +1,115 @@
+@use 'open-props/gray';
+@use 'open-props/orange';
+
+html {
+    scroll-behavior: smooth;
+
+    --size-0: 0rem;
+
+    /* light */
+    --brand-light: var(--orange-6);
+    --brand-inverted-light: var(--blue-6);
+    --text1-light: var(--gray-8);
+    --text2-light: var(--gray-7);
+    --surface0-light: white;
+    --surface1-light: var(--gray-0);
+    --surface2-light: var(--gray-1);
+    --surface3-light: var(--gray-2);
+    --surface4-light: var(--gray-3);
+    --surface5-light: var(--gray-4);
+    --surface-shadow-light: 200 10% 20%;
+    --shadow-strength-light: 2%;
+
+    /* dark */
+    --brand-dark: var(--orange-4);
+    --brand-inverted-dark: var(--blue-4);
+    --text1-dark: var(--gray-3);
+    --text2-dark: var(--gray-4);
+    --surface0-dark: var(--gray-9);
+    --surface1-dark: var(--gray-8);
+    --surface2-dark: var(--gray-7);
+    --surface3-dark: var(--gray-6);
+    --surface4-dark: var(--gray-5);
+    --surface5-dark: var(--gray-4);
+    --surface-shadow-dark: 200 10% 13%;
+    --shadow-strength-dark: 20%;
+}
+
+:root {
+    color-scheme: light;
+
+    /* set defaults */
+    --brand: var(--brand-light);
+    --brand-inverted: var(--brand-inverted-light);
+    --text1: var(--text1-light);
+    --text2: var(--text2-light);
+    --surface0: var(--surface0-light);
+    --surface1: var(--surface1-light);
+    --surface2: var(--surface2-light);
+    --surface3: var(--surface3-light);
+    --surface4: var(--surface4-light);
+    --surface5: var(--surface5-light);
+    --surface-shadow: var(--surface-shadow-light);
+    --shadow-strength: var(--shadow-strength-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+        --brand: var(--brand-dark);
+        --brand-inverted: var(--brand-inverted-dark);
+        --text1: var(--text1-dark);
+        --text2: var(--text2-dark);
+        --surface0: var(--surface0-dark);
+        --surface1: var(--surface1-dark);
+        --surface2: var(--surface2-dark);
+        --surface3: var(--surface3-dark);
+        --surface4: var(--surface4-dark);
+        --surface5: var(--surface5-dark);
+        --surface-shadow: var(--surface-shadow-dark);
+        --shadow-strength: var(--shadow-strength-dark);
+    }
+}
+
+[color-scheme="light"] {
+    color-scheme: light;
+
+    --brand: var(--brand-light);
+    --brand-inverted: var(--brand-inverted-light);
+    --text1: var(--text1-light);
+    --text2: var(--text2-light);
+    --surface0: var(--surface0-light);
+    --surface1: var(--surface1-light);
+    --surface2: var(--surface2-light);
+    --surface3: var(--surface3-light);
+    --surface4: var(--surface4-light);
+    --surface5: var(--surface5-light);
+    --surface-shadow: var(--surface-shadow-light);
+    --shadow-strength: var(--shadow-strength-light);
+}
+
+[color-scheme="dark"] {
+    color-scheme: dark;
+
+    --brand: var(--brand-dark);
+    --brand-inverted: var(--brand-inverted-dark);
+    --text1: var(--text1-dark);
+    --text2: var(--text2-dark);
+    --surface0: var(--surface0-dark);
+    --surface1: var(--surface1-dark);
+    --surface2: var(--surface2-dark);
+    --surface3: var(--surface3-dark);
+    --surface4: var(--surface4-dark);
+    --surface5: var(--surface5-dark);
+    --surface-shadow: var(--surface-shadow-dark);
+    --shadow-strength: var(--shadow-strength-dark);
+}
+
+:where(a):where([href]):where(:visited), :where(a):where([href]) {
+    text-decoration-color: var(--text1);
+}
+
+:where(a[href]), :where(a[href]):visited {
+    color: var(--text1);
+}

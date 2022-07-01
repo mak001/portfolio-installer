@@ -15,7 +15,8 @@
         "axllent/silverstripe-bootstrap-forms": "^2.0",
         "wilr/silverstripe-googlesitemaps": "^2.2",
         "isaacdanielreyna/retrowave-theme": "dev-master",
-        "innoweb/silverstripe-social-metadata": "^7.0"
+        "innoweb/silverstripe-social-metadata": "^7.0",
+        "dorsetdigital/silverstripe-enhanced-requirements": "^1.0"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",
@@ -39,7 +40,8 @@
             "web.config"
         ],
         "expose": [
-            "themes/portfolio/images"
+            "themes/portfolio/images",
+            "themes/portfolio-openprops/dist"
         ]
     },
     "autoload": {

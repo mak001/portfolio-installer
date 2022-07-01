@@ -111,20 +111,18 @@ class Uses extends DataObject
         return '';
     }
 
-    /**
+   /**
+     * Get the absolute URL for this page, including protocol and host.
+     *
      * @return string
-     */
-    public function getAbsoluteLURL(): string
-    {
-        return '';
-    }
-
-    /**
-     * @return false|string
      */
     public function AbsoluteLink()
     {
-        return Director::absoluteURL($this->Link());
+        if ($this->hasMethod('alternateAbsoluteLink')) {
+            return $this->alternateAbsoluteLink();
+        } else {
+            return Director::absoluteURL($this->Link());
+        }
     }
 
     /**

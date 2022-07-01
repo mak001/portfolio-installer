@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42e7164a49e68968dee2e529ac45f67a",
+    "content-hash": "447ee298d3d32d0effe3bad973f312b1",
     "packages": [
         {
             "name": "axllent/silverstripe-bootstrap-forms",
@@ -717,6 +717,56 @@
                 }
             ],
             "time": "2022-02-28T11:07:21+00:00"
+        },
+        {
+            "name": "dorsetdigital/silverstripe-enhanced-requirements",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DorsetDigital/silverstripe-enhanced-requirements.git",
+                "reference": "773b10efe0e5b755eb179300488830edb0359be8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DorsetDigital/silverstripe-enhanced-requirements/zipball/773b10efe0e5b755eb179300488830edb0359be8",
+                "reference": "773b10efe0e5b755eb179300488830edb0359be8",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "DorsetDigital\\EnhancedRequirements\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Burt",
+                    "email": "tim@dorset-digital.net"
+                }
+            ],
+            "description": "Enhanced requirements for Silverstripe",
+            "homepage": "https://github.com/DorsetDigital/silverstripe-enhanced-requirements",
+            "keywords": [
+                "assets",
+                "front-end",
+                "html",
+                "http2",
+                "performance",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/DorsetDigital/silverstripe-enhanced-requirements/issues",
+                "source": "https://github.com/DorsetDigital/silverstripe-enhanced-requirements/tree/v1.0.1"
+            },
+            "time": "2021-06-25T10:19:06+00:00"
         },
         {
             "name": "dynamic/flexslider",

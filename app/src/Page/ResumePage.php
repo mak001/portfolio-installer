@@ -33,6 +33,9 @@ class ResumePage extends \Page
         'Jobs' => Job::class,
     ];
 
+    /**
+     * @inheritDoc
+     */
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function(FieldList $fields) {
