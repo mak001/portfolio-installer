@@ -3,7 +3,7 @@
     <% loop $Images %>
         <div class="photogallery-holder">
             <a href="#gallery-$Up.ID-$ID" data-title="<h4>$Title</h4> $Content" class="no-decoration">
-                <div><img src="$Image.Fill(576,576).URL" alt="$Image.Title"></div>
+                <img src="$Image.Fill(576,576).URL" alt="$Image.Title">
             </a>
             <a href="#close-lighbox" class="no-decoration lightbox" id="gallery-$Up.ID-$ID">
                 <div class="image" style="background-image: url('$Image.URL');"></div>

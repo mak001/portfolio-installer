@@ -55,33 +55,32 @@
     a:not(.lightbox) {
         padding: 0;
         margin: 0;
+        display: block;
 
-        div {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            transition: top 0.5s cubic-bezier(.69, .3, .47, .86), left 0.5s cubic-bezier(.69, .3, .47, .86);
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(at top left, var(--brand) 0% 50%, transparent 50% 100%);
+            padding: var(--size-00);
+            top: -100%;
+            left: -100%;
+        }
+
+        &:hover::before {
+            top: 0%;
+            left: 0%;
+        }
+
+        img {
+            padding: var(--size-1);
             position: relative;
-            overflow: hidden;
-
-            &::before {
-                content: "";
-                display: block;
-                position: absolute;
-                transition: top 0.5s cubic-bezier(.69, .3, .47, .86), left 0.5s cubic-bezier(.69, .3, .47, .86);
-                width: 200%;
-                height: 200%;
-                background-image: radial-gradient(at top left, var(--brand) 0% 50%, transparent 50% 100%);
-                padding: var(--size-00);
-                top: -100%;
-                left: -100%;
-            }
-
-            &:hover::before {
-                top: 0%;
-                left: 0%;
-            }
-
-            img {
-                padding: var(--size-1);
-                position: relative;
-            }
         }
     }
 }
