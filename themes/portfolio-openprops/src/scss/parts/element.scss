@@ -1,3 +1,11 @@
 .element {
-    background-color: var(--brand);
+    margin-bottom: var(--size-8);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: var(--size-4);
+
+        &+p {
+            margin-top: 0;
+        }
+    }
 }
