@@ -111,6 +111,10 @@ menu.breadcrumb {
 
             & i {
                 transition: color 0.25s ease;
+
+                @media (--motionNotOK) {
+                    transition: none;
+                }
             }
 
             &:hover i {

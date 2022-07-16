@@ -14,6 +14,10 @@ a:not(.no-decoration):not(.icon) {
     background-size: 0% 3px;
     transition: background-size 0.25s ease-in-out;
 
+    @media (--motionNotOK) {
+        transition: none;
+    }
+
     &:hover {
         background-size: 100% 3px;
     }
@@ -21,6 +25,10 @@ a:not(.no-decoration):not(.icon) {
 
 .icon {
     transition: all 0.25s ease;
+
+    @media (--motionNotOK) {
+        transition: none;
+    }
 
     &:hover {
         color: var(--brand);

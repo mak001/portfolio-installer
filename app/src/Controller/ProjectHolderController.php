@@ -10,6 +10,7 @@ use SilverStripe\Control\HTTPRequest;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\PaginatedList;
+use SilverStripe\View\Requirements;
 use SilverStripe\View\ViewableData_Customised;
 
 /**
@@ -26,6 +27,16 @@ class ProjectHolderController extends \PageController
         'languages',
         'frameworks',
     ];
+
+    /**
+     * @inheritDoc
+     */
+    protected function init()
+    {
+        parent::init();
+
+        Requirements::themedCSS("dist/css/project_holder.css");
+    }
 
     /**
      * @param HTTPRequest $request
