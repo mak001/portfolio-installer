@@ -71,6 +71,10 @@
             padding: var(--size-00);
             top: -100%;
             left: -100%;
+
+            @media (prefers-reduced-motion) {
+                transition: none;
+            }
         }
 
         &:hover::before {
