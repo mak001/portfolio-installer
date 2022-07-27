@@ -3,6 +3,7 @@
 namespace Mak001\Portfolio\Page;
 
 use DNADesign\Elemental\Extensions\ElementalPageExtension;
+use Mak001\Portfolio\Controller\ProjectController;
 use Mak001\Portfolio\Model\Link;
 use Mak001\Portfolio\Model\Project\Framework;
 use Mak001\Portfolio\Model\Project\Language;
@@ -92,6 +93,13 @@ class Project extends \Page
         'Frameworks' => Framework::class,
         'Sources' => Link::class,
     ];
+
+     /**
+     * @var string
+     * @config
+     */
+    private static $controller_name = ProjectController::class;
+
 
     /**
      * @inheritDoc
