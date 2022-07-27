@@ -35,7 +35,7 @@ class ProjectHolderController extends \PageController
     {
         parent::init();
 
-        Requirements::themedCSS("dist/css/project_holder.css");
+        Requirements::themedCSS("dist/css/project_holder.css", null, ['preload' => true]);
     }
 
     /**
