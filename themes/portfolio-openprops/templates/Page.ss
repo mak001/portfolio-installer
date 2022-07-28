@@ -14,6 +14,9 @@
         <% if $Breadcrumbs && not $isHomePage %>$Breadcrumbs</div><% end_if %>
 
         <main id="content">
+        <% if not $isHomePage %>
+            <h1>$Title</h1>
+        <% end_if %>
             $Layout
         </main>
 
