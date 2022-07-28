@@ -90,7 +90,10 @@ class Uses extends DataObject
             $prefix = $this->getAbsoluteLURL();
             $urlSegment->setURLPrefix($prefix);
 
-            $helpText = _t('SiteTreeURLSegmentField.HelpChars', ' Special characters are automatically converted or removed.');
+            $helpText = _t(
+                'SiteTreeURLSegmentField.HelpChars',
+                'Special characters are automatically converted or removed.'
+            );
             $urlSegment->setHelpText($helpText);
 
             $fields->addFieldsToTab('Root.Main', [
@@ -111,7 +114,7 @@ class Uses extends DataObject
         return '';
     }
 
-   /**
+    /**
      * Get the absolute URL for this page, including protocol and host.
      *
      * @return string
