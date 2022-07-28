@@ -36,9 +36,9 @@ class ResumePage extends \Page
     /**
      * @inheritDoc
      */
-    public function getCMSFields()
+    public function getCMSFields(): FieldList
     {
-        $this->beforeUpdateCMSFields(function(FieldList $fields) {
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $schoolsField = GridField::create('Schools', 'Schools', $this->Schools())
                 ->setConfig(GridFieldConfig_RelationEditor::create());
             $fields->addFieldToTab('Root.Schools', $schoolsField);

@@ -22,5 +22,7 @@
 
         <!-- Allow non camel cased method names -->
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+
+        <exclude-pattern>*/dist/css/*</exclude-pattern>
     </rule>
 </ruleset>
