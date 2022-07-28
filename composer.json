@@ -1,7 +1,7 @@
 {
-    "name": "silverstripe/installer",
+    "name": "mak001/portfolio-installer",
     "type": "silverstripe-recipe",
-    "description": "The SilverStripe Framework Installer",
+    "description": "The installer for mak001's portfolio site",
     "require": {
         "silverstripe/recipe-cms": "^4.8",
         "dnadesign/silverstripe-elemental": "^4",
@@ -46,12 +46,6 @@
             "themes/portfolio/images",
             "themes/portfolio-openprops/dist"
         ]
-    },
-    "autoload": {
-        "psr-4": {
-            "Mak001\\Portfolio\\": "app/src/",
-            "Mak001\\Portfolio\\Test\\": "app/tests/"
-        }
     },
     "config": {
         "process-timeout": 600,
