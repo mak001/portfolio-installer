@@ -18,9 +18,14 @@
         "dorsetdigital/silverstripe-enhanced-requirements": "^1.0"
     },
     "require-dev": {
-        "sminnee/phpunit": "^5.7",
-        "sminnee/phpunit-mock-objects": "^3.4.5",
-        "squizlabs/php_codesniffer": "^3.0",
+        "ergebnis/composer-normalize": "^2.23",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "silverstripe/sqlite3": "^2",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
         "lekoala/silverstripe-debugbar": "^2.0"
     },
     "extra": {
@@ -55,7 +60,8 @@
             "composer/installers": true,
             "silverstripe/recipe-plugin": true,
             "silverstripe/vendor-plugin": true,
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true
         }
     },
     "prefer-stable": true,
