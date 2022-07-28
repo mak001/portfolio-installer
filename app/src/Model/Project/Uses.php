@@ -126,8 +126,8 @@ class Uses extends DataObject
     }
 
     /**
-     * Get the title for use in menus for this page. If the MenuTitle field is set it returns that, else it returns the
-     * Title field.
+     * Get the title for use in menus for this page.
+     * If the MenuTitle field is set it returns that, else it returns the Title field.
      *
      * @return string
      */

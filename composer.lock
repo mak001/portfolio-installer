@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35658a7b5eee1c6544aed77274394db3",
+    "content-hash": "d25da7da52dc94db8418d1edb49f45a5",
     "packages": [
         {
             "name": "axllent/silverstripe-bootstrap-forms",
@@ -1720,61 +1720,6 @@
                 }
             ],
             "time": "2022-05-21T17:30:32+00:00"
-        },
-        {
-            "name": "isaacdanielreyna/retrowave-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/IsaacDanielReyna/silverstripe-theme-retrowave.git",
-                "reference": "c6a660f15e8a3a33d2944ea2ec9ce9a15dc63ad8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/IsaacDanielReyna/silverstripe-theme-retrowave/zipball/c6a660f15e8a3a33d2944ea2ec9ce9a15dc63ad8",
-                "reference": "c6a660f15e8a3a33d2944ea2ec9ce9a15dc63ad8",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "^4.0"
-            },
-            "default-branch": true,
-            "type": "silverstripe-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-feature/media-object": "1.0-dev"
-                },
-                "expose": [
-                    "css",
-                    "images",
-                    "javascript",
-                    "webfonts"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Isaac Daniel Reyna",
-                    "email": "silverstripe@isaacreyna.com",
-                    "homepage": "https://www.isaacreyna.com"
-                }
-            ],
-            "description": "SilverStripe 4 Theme - RetroWave",
-            "homepage": "https://github.com/IsaacDanielReyna/silverstripe-theme-retrowave",
-            "keywords": [
-                "bootstrap",
-                "retrowave",
-                "silverstripe",
-                "theme"
-            ],
-            "support": {
-                "issues": "https://github.com/IsaacDanielReyna/silverstripe-theme-retrowave/issues",
-                "source": "https://github.com/IsaacDanielReyna/silverstripe-theme-retrowave/tree/master"
-            },
-            "time": "2019-07-01T02:22:48+00:00"
         },
         {
             "name": "jakeasmith/http_build_url",
@@ -9274,9 +9219,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "isaacdanielreyna/retrowave-theme": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

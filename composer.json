@@ -13,7 +13,6 @@
         "dnadesign/silverstripe-elemental-userforms": "^3.0",
         "axllent/silverstripe-bootstrap-forms": "^2.0",
         "wilr/silverstripe-googlesitemaps": "^2.2",
-        "isaacdanielreyna/retrowave-theme": "dev-master",
         "innoweb/silverstripe-social-metadata": "^7.0",
         "dorsetdigital/silverstripe-enhanced-requirements": "^1.0"
     },
