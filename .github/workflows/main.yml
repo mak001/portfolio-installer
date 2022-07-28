@@ -1,11 +1,10 @@
 name: main
 on:
   pull_request:
-    branches:
-      - [ '**' ]
+    branches: [ '**' ]
   push:
-    branches:
-      - [ '**' ]
+    branches: [ '**' ]
+
 env:
   php_extensions: ctype, dom, fileinfo, hash, intl, mbstring, session, simplexml, tokenizer, xml, gd, sqlite3, pcov, opcache, tidy, zip
   SS_DATABASE_CLASS: SQLite3Database
