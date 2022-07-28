@@ -3,7 +3,6 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": "^7.4",
         "silverstripe/recipe-cms": "^4.8",
         "dnadesign/silverstripe-elemental": "^4",
         "dynamic/silverstripe-elemental-embedded-code": "^2.0",
