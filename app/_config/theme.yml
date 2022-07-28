@@ -6,5 +6,4 @@ SilverStripe\View\SSViewer:
     - '$public'
     - 'portfolio-openprops'
 #    - 'portfolio'
-#    - 'retrowave-theme'
     - '$default'
