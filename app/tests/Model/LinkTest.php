@@ -29,8 +29,7 @@ class LinkTest extends SapphireTest
      */
     public function testGetCMSValidator()
     {
-        $object = $this->objFromFixture(Link::class, 'google');
-        $object->Title = '';
+        $object = Link::create();
         $this->expectException(ValidationException::class);
         $object->write();
     }
