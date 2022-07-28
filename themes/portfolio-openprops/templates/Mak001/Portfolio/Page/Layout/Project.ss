@@ -1,5 +1,3 @@
-<h1>$Title</h1>
-
 <div class="uses">
     <div class="languages">
         <h5>Languages</h5>
@@ -32,8 +30,5 @@
         <% end_if %>
     </div>
 </div>
-
-
-
 
 $ElementalArea
