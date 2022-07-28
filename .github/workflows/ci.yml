@@ -16,17 +16,14 @@ jobs:
 
     env:
       php_extensions: ctype, dom, fileinfo, hash, intl, mbstring, session, simplexml, tokenizer, xml, pdo, mysqli, gd, zip
-      SS_DATABASE_NAME: test_db
-      SS_DATABASE_USERNAME: root
-      SS_DATABASE_PASSWORD: root
-      SS_DATABASE_SERVER: localhost
 
     services:
       mysql:
         image: "mysql:5.7"
         env:
-          MYSQL_ROOT_PASSWORD: ${{ env.SS_DATABASE_PASSWORD }}
-          MYSQL_DATABASE: ${{ env.SS_DATABASE_NAME }}
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD:
+          MYSQL_DATABASE: test_db
         ports:
           - 3306/tcp
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
