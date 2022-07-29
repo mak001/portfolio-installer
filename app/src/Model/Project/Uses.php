@@ -111,7 +111,7 @@ class Uses extends DataObject
      */
     public function Link(): string
     {
-        return '';
+        throw new \Exception(self::class . " must implement Link()");
     }
 
      /**

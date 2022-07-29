@@ -79,7 +79,7 @@ class Link extends DataObject
     {
         $result = parent::validate();
 
-        if (!$this->Title) {
+        if (!(boolean) $this->Title) {
             $result->addFieldError(
                 'Title',
                 ValidationResult::TYPE_ERROR,
@@ -87,7 +87,7 @@ class Link extends DataObject
             );
         }
 
-        if (!$this->URL) {
+        if (!(boolean) $this->URL) {
             $result->addFieldError(
                 'URL',
                 ValidationResult::TYPE_ERROR,

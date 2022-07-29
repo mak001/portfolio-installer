@@ -4,54 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10d1bdb7f702ddf17ec85b48813b5095",
+    "content-hash": "15824a5f383a0ed7d98ebcaea10774fb",
     "packages": [
-        {
-            "name": "axllent/silverstripe-bootstrap-forms",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/axllent/silverstripe-bootstrap-forms.git",
-                "reference": "6c9bbf0fb1d9e3b591d55e1f2efa0956137a7a3f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/axllent/silverstripe-bootstrap-forms/zipball/6c9bbf0fb1d9e3b591d55e1f2efa0956137a7a3f",
-                "reference": "6c9bbf0fb1d9e3b591d55e1f2efa0956137a7a3f",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "^4.0"
-            },
-            "type": "silverstripe-vendormodule",
-            "autoload": {
-                "psr-4": {
-                    "Axllent\\BootstrapForms\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Slooten",
-                    "homepage": "http://www.axllent.org/"
-                }
-            ],
-            "description": "An extension to add CSS classes to Silverstripe forms to play nicer with Twitter Bootstrap",
-            "homepage": "https://github.com/axllent/silverstripe-bootstrap-forms",
-            "keywords": [
-                "Forms",
-                "bootstrap",
-                "silverstripe"
-            ],
-            "support": {
-                "issues": "https://github.com/axllent/silverstripe-bootstrap-forms/issues",
-                "source": "https://github.com/axllent/silverstripe-bootstrap-forms/tree/master"
-            },
-            "time": "2018-09-15T01:12:36+00:00"
-        },
         {
             "name": "betterbrief/silverstripe-googlemapfield",
             "version": "v2.2.1",

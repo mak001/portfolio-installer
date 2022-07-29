@@ -3,14 +3,12 @@
 namespace Mak001\Portfolio\Model\Project;
 
 use Mak001\Portfolio\Page\Project;
-use SilverStripe\ORM\ManyManyList;
 
 /**
- * @method ManyManyList|Project[] Projects()
+ * @method SilverStripe\ORM\ManyManyList|Project[] Projects()
  */
 class Framework extends Uses
 {
-
     /**
      * @var string
      * @config
