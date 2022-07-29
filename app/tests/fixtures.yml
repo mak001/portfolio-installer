@@ -48,6 +48,14 @@ Mak001\Portfolio\Model\Link:
     Title: Google
     URL: 'https://google.com'
 
+Mak001\Portfolio\Page\ProjectHolder:
+  holder:
+    Title: 'holder'
+
 Mak001\Portfolio\Page\Project:
   portfolio:
     Title: 'portfolio'
+
+Mak001\Portfolio\Page\ResumePage:
+  resume:
+    Title: 'resume'
