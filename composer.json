@@ -3,11 +3,12 @@
     "type": "silverstripe-recipe",
     "description": "The installer for mak001's portfolio site",
     "require": {
-        "silverstripe/recipe-cms": "^4.8",
+        "silverstripe/recipe-cms": "^4.11",
+        "dynamic/silverstripe-linkable": "dev-embedUpdate",
         "dnadesign/silverstripe-elemental": "^4",
-        "dynamic/silverstripe-elemental-embedded-code": "^2.0",
-        "dynamic/silverstripe-elemental-flexslider": "^2.0",
-        "dynamic/silverstripe-elemental-gallery": "^2.0",
+        "dynamic/silverstripe-elemental-embedded-code": "^2.1",
+        "dynamic/silverstripe-elemental-flexslider": "^2.1",
+        "dynamic/silverstripe-elemental-gallery": "^2.1",
         "dynamic/silverstripe-elemental-image": "^2.0",
         "dynamic/silverstripe-elemental-markdown": "^1.0",
         "dnadesign/silverstripe-elemental-userforms": "^3.0",
@@ -27,6 +28,12 @@
         "lekoala/silverstripe-debugbar": "^2.0",
         "syntro/silverstripe-phpstan": "^1.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:a2nt/silverstripe-linkable.git"
+        }
+    ],
     "extra": {
         "resources-dir": "_resources",
         "project-files-installed": [

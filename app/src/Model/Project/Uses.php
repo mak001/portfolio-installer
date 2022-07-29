@@ -140,7 +140,7 @@ class Uses extends DataObject
      *
      * @return mixed
      */
-    public function getMenuTitle()
+    public function getMenuTitle(): mixed
     {
         return $this->getField('Title');
     }
