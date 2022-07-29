@@ -25,7 +25,8 @@
         "silverstripe/sqlite3": "^2",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.6",
-        "lekoala/silverstripe-debugbar": "^2.0"
+        "lekoala/silverstripe-debugbar": "^2.0",
+        "syntro/silverstripe-phpstan": "^1.0"
     },
     "extra": {
         "resources-dir": "_resources",

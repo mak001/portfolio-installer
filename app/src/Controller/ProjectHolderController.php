@@ -31,7 +31,7 @@ class ProjectHolderController extends \PageController
     /**
      * @inheritDoc
      */
-    protected function init()
+    protected function init(): void
     {
         parent::init();
 
@@ -56,9 +56,9 @@ class ProjectHolderController extends \PageController
 
     /**
      * @param HTTPRequest|null $request
-     * @return DataObject|Language|null
+     * @return Language|null
      */
-    public function getLanguage(HTTPRequest $request = null): ?DataObject
+    public function getLanguage(HTTPRequest $request = null): ?Language
     {
         if ($request === null) {
             $request = $this->getRequest();
@@ -89,9 +89,9 @@ class ProjectHolderController extends \PageController
 
     /**
      * @param HTTPRequest|null $request
-     * @return DataObject|Framework|null
+     * @return Framework|null
      */
-    public function getFramework(HTTPRequest $request = null): ?DataObject
+    public function getFramework(HTTPRequest $request = null): ?Framework
     {
         if ($request === null) {
             $request = $this->getRequest();
@@ -190,9 +190,9 @@ class ProjectHolderController extends \PageController
      * If the request should be shown in a table
      *
      * @param HTTPRequest|null $request
-     * @return void
+     * @return bool
      */
-    public function getIsTable(HTTPRequest $request = null)
+    public function getIsTable(HTTPRequest $request = null): bool
     {
         if ($request == null) {
             $request = $this->getRequest();

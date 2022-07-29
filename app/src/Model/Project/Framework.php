@@ -3,7 +3,11 @@
 namespace Mak001\Portfolio\Model\Project;
 
 use Mak001\Portfolio\Page\Project;
+use SilverStripe\ORM\ManyManyList;
 
+/**
+ * @method ManyManyList|Project[] Projects()
+ */
 class Framework extends Uses
 {
 
@@ -26,6 +30,9 @@ class Framework extends Uses
      */
     public function Link(): string
     {
+        if ($this->getProjectHolder() == null) {
+            return '';
+        }
         return $this->getProjectHolder()->FrameworkLink($this->URLSegment);
     }
 
@@ -34,6 +41,9 @@ class Framework extends Uses
      */
     public function getAbsoluteLURL(): string
     {
+        if ($this->getProjectHolder() == null) {
+            return '';
+        }
         return $this->getProjectHolder()->FrameworkLink() . '/';
     }
 }

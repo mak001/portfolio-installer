@@ -6,16 +6,16 @@ use Mak001\Portfolio\Page\ResumePage;
 use SilverStripe\ORM\DataObject;
 
 /**
- * @property string Title
- * @property string CompanyName
- * @property string CompanyURL
- * @property string Location
- * @property string StartDate
- * @property string EndDate
- * @property string Description
+ * @property string $Title
+ * @property string $CompanyName
+ * @property string $CompanyURL
+ * @property string $Location
+ * @property string $StartDate
+ * @property string $EndDate
+ * @property string $Description
  *
- * @property int ResumeID
- * @method ResumePage Resume
+ * @property int $ResumeID
+ * @method ResumePage Resume()
  */
 class Job extends DataObject
 {

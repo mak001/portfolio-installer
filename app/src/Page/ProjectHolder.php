@@ -55,10 +55,9 @@ class ProjectHolder extends \Page
     }
 
     /**
-     * FeatureCollectionPage constructor.
-     * @param ArrayList $breadcrumbs
+     * @inheritDoc
      */
-    public function onBeforeUpdateBreadCrumbItems(&$breadcrumbs)
+    public function onBeforeUpdateBreadcrumbItems(&$crumbItems): void
     {
         parent::onBeforeUpdateBreadcrumbItems($breadcrumbs);
         $controller = Controller::curr();

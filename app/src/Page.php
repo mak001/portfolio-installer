@@ -8,18 +8,6 @@ namespace {
     class Page extends SiteTree
     {
         /**
-         * @var array
-         * @config
-         */
-        private static $db = [];
-
-        /**
-         * @var array
-         * @config
-         */
-        private static $has_one = [];
-
-        /**
          * Returns a list of breadcrumbs for the current page.
          *
          * @param int $maxDepth The maximum depth to traverse.
@@ -39,7 +27,7 @@ namespace {
         /**
          * @param ArrayList $crumbItems
          */
-        public function onBeforeUpdateBreadcrumbItems(&$crumbItems)
+        public function onBeforeUpdateBreadcrumbItems(&$crumbItems): void
         {
             $this->extend('onBeforeUpdateBreadCrumbItems', $crumbItems);
         }

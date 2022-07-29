@@ -3,6 +3,7 @@
 namespace Mak001\Portfolio\Page;
 
 use DNADesign\Elemental\Extensions\ElementalPageExtension;
+use DNADesign\Elemental\Models\ElementContent;
 use Mak001\Portfolio\Controller\ProjectController;
 use Mak001\Portfolio\Model\Link;
 use Mak001\Portfolio\Model\Project\Framework;
@@ -18,10 +19,10 @@ use SilverStripe\ORM\HasManyList;
 use SilverStripe\ORM\ManyManyList;
 
 /**
- * @property string Teaser
- * @property bool MainImageHasLogo
+ * @property string $Teaser
+ * @property bool $MainImageHasLogo
  *
- * @property int MainPhotoID
+ * @property int $MainPhotoID
  * @method Image MainPhoto()
  *
  * @method HasManyList Sources()

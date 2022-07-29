@@ -6,14 +6,14 @@ use Mak001\Portfolio\Page\ResumePage;
 use \SilverStripe\ORM\DataObject;
 
 /**
- * @property string Title
- * @property string Location
- * @property string Degree
- * @property string Graduated
- * @property string Honors
+ * @property string $Title
+ * @property string $Location
+ * @property string $Degree
+ * @property string $Graduated
+ * @property string $Honors
  *
- * @property int ResumeID
- * @method ResumePage Resume
+ * @property int $ResumeID
+ * @method ResumePage Resume()
  */
 class School extends DataObject
 {

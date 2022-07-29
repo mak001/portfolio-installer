@@ -11,14 +11,14 @@ use SilverStripe\ORM\ValidationResult;
 use SilverStripe\SiteConfig\SiteConfig;
 
 /**
- * @property string Title
- * @property string Icon
- * @property string URL
- * @property bool Button
- * @property bool Outline
- * @property bool Dark
+ * @property string $Title
+ * @property string $Icon
+ * @property string $URL
+ * @property bool $Button
+ * @property bool $Outline
+ * @property bool $Dark
  *
- * @property int SiteConfigID
+ * @property int $SiteConfigID
  * @method SiteConfig SiteConfig()
  */
 class Link extends DataObject
