@@ -20,7 +20,7 @@ class UsesTest extends SapphireTest
         $object = $this->getMockBuilder(Uses::class)
             ->onlyMethods(['getAbsoluteLURL'])
             ->getMock();
-        $object->method('getAbsoluteLURL')->will($this->returnValue('TEST'));
+        $object->method('getAbsoluteLURL')->will($this->returnValue('TEST')); /* @phpstan-ignore-line */
 
         $this->assertInstanceOf(FieldList::class, $object->getCMSFields());
     }
@@ -61,7 +61,7 @@ class UsesTest extends SapphireTest
         $object = $this->getMockBuilder(Uses::class)
             ->addMethods(['alternateAbsoluteLink'])
             ->getMock();
-        $object->method('alternateAbsoluteLink')->will($this->returnValue('ALTERNATE'));
+        $object->method('alternateAbsoluteLink')->will($this->returnValue('ALTERNATE')); /* @phpstan-ignore-line */
 
         $this->assertEquals('ALTERNATE', $object->AbsoluteLink());
     }
