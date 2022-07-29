@@ -15,8 +15,6 @@ use SilverStripe\ORM\ManyManyList;
 
 /**
  * @property string $Title
- * @property string $BackgroundColor
- * @property string $ForegroundColor
  * @property string $URLSegment
  * @property string $Description
  *
@@ -142,7 +140,7 @@ class Uses extends DataObject
      *
      * @return mixed
      */
-    public function getMenuTitle(): mixed
+    public function getMenuTitle()
     {
         return $this->getField('Title');
     }
