@@ -7,6 +7,7 @@ use SilverStripe\Forms\HiddenField;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\Validator;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\ValidationResult;
 use SilverStripe\SiteConfig\SiteConfig;
 
 /**
@@ -69,5 +70,31 @@ class Link extends DataObject
             'Title',
             'URL',
         ]);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function validate(): ValidationResult
+    {
+        $result = parent::validate();
+
+        if (!$this->Title) {
+            $result->addFieldError(
+                'Title',
+                ValidationResult::TYPE_ERROR,
+                _t(static::class . '.TITLE_REQUIRED', 'A Title is required before you can save')
+            );
+        }
+
+        if (!$this->URL) {
+            $result->addFieldError(
+                'URL',
+                ValidationResult::TYPE_ERROR,
+                _t(static::class . '.URL_REQUIRED', 'A URL is required before you can save')
+            );
+        }
+
+        return $result;
     }
 }
