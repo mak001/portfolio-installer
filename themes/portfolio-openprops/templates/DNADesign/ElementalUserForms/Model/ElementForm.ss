@@ -3,4 +3,5 @@
     $Form
 </div>
 <div style="clear: both"></div>
+<% require themedCSS('dist/css/open-props/extra/buttons.css') %>
 <% require themedCSS('dist/css/parts/form.css') %>
