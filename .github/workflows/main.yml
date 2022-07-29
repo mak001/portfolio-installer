@@ -59,7 +59,7 @@ jobs:
         run: vendor/bin/phpcs -p .
 
       - name: Run phpstan
-        run: vendor/bin/phpstan analyse -l 8
+        run: vendor/bin/phpstan analyse -l 9
 
       - name: Run phpunit
         run: vendor/bin/phpunit
