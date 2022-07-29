@@ -5,7 +5,7 @@ namespace Mak001\Portfolio\Model\Project;
 use Mak001\Portfolio\Page\Project;
 
 /**
- * @method ManyManyList|Project[] Projects()
+ * @method SilverStripe\ORM\ManyManyList|Project[] Projects()
  */
 class Language extends Uses
 {
@@ -24,7 +24,7 @@ class Language extends Uses
     ];
 
     /**
-     * @return string
+     * @inheritDoc
      */
     public function Link(): string
     {

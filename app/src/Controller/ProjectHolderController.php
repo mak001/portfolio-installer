@@ -64,7 +64,7 @@ class ProjectHolderController extends \PageController
             $request = $this->getRequest();
         }
 
-        if (!$request->param('ID')) {
+        if ($request->param('ID') == null) {
             return null;
         }
 
@@ -97,7 +97,7 @@ class ProjectHolderController extends \PageController
             $request = $this->getRequest();
         }
 
-        if (!$request->param('ID')) {
+        if ($request->param('ID') == null) {
             return null;
         }
 
