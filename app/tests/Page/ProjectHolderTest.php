@@ -4,7 +4,6 @@ namespace Mak001\Portfolio\Test\Page;
 
 use Mak001\Portfolio\Page\ProjectHolder;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\Forms\GridField\GridField;
 
 class ProjectHolderTest extends SapphireTest
 {
