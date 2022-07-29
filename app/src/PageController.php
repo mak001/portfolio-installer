@@ -17,7 +17,7 @@ namespace {
         /**
          * @inheritDoc
          */
-        protected function init(): void
+        protected function init()
         {
             parent::init();
             Requirements::css(
