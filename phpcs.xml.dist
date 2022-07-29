@@ -7,6 +7,7 @@
     <!-- Don't sniff third party libraries -->
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/thirdparty/*</exclude-pattern>
+    <exclude-pattern>*/.graphql-generated/*</exclude-pattern>
 
     <!-- Don't sniff compiled css-->
     <exclude-pattern>*/dist/css/*</exclude-pattern>
