@@ -10,7 +10,7 @@ class BreadcrumbTest extends SapphireTest
     /**
      * @return void
      */
-    public function testConstructWithLink()
+    public function testConstructWithLink(): void
     {
         $crumb = new Breadcrumb('link', 'Title', 1);
         $this->assertFalse($crumb->Unlinked);
@@ -20,7 +20,7 @@ class BreadcrumbTest extends SapphireTest
     /**
      * @return void
      */
-    public function testConstructWithoutLink()
+    public function testConstructWithoutLink(): void
     {
         $crumb = new Breadcrumb(false, 'Title', 1);
         $this->assertTrue($crumb->Unlinked);

@@ -11,9 +11,9 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\HasManyList;
 
 /**
- * @method HasManyList|School[] Schools
- * @method HasManyList|Skill[] Skills
- * @method HasManyList|Job[] Jobs
+ * @method HasManyList|School[] Schools()
+ * @method HasManyList|Skill[] Skills()
+ * @method HasManyList|Job[] Jobs()
  */
 class ResumePage extends \Page
 {
@@ -24,7 +24,7 @@ class ResumePage extends \Page
     private static $table_name = 'ResumePage';
 
     /**
-     * @var array
+     * @var string[]
      * @config
      */
     private static $has_many = [

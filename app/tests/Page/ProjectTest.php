@@ -10,14 +10,14 @@ use SilverStripe\Forms\GridField\GridField;
 class ProjectTest extends SapphireTest
 {
     /**
-     * @var string
+     * @inheritDoc
      */
     protected static $fixture_file = "../fixtures.yml";
 
     /**
      *
      */
-    public function testGetCMSFields()
+    public function testGetCMSFields(): void
     {
         $object = $this->objFromFixture(Project::class, 'portfolio');
         $fields = $object->getCMSFields();

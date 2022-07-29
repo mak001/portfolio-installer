@@ -29,7 +29,7 @@ class SiteConfigExtension extends DataExtension
     /**
      * @inheritDoc
      */
-    public function updateCMSFields(FieldList $fields)
+    public function updateCMSFields(FieldList $fields): void
     {
         $links = new GridField('Links', 'Links', $this->owner->Links());
         $links->setConfig(GridFieldConfig_RelationEditor::create());

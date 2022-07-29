@@ -14,7 +14,7 @@ class ProjectController extends \PageController
     /**
      * @inheritDoc
      */
-    protected function init()
+    protected function init(): void
     {
         parent::init();
 

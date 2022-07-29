@@ -12,15 +12,16 @@ class LinkTest extends SapphireTest
 {
 
     /**
-     * @var string
+     * @inheritDoc
      */
     protected static $fixture_file = "../fixtures.yml";
 
     /**
      *
      */
-    public function testGetCMSFields()
+    public function testGetCMSFields(): void
     {
+        /** @var Link $object */
         $object = $this->objFromFixture(Link::class, 'google');
         $this->assertInstanceOf(FieldList::class, $object->getCMSFields());
     }
@@ -28,8 +29,10 @@ class LinkTest extends SapphireTest
     /**
      *
      */
-    public function testGetCMSValidator()
+    public function testGetCMSValidator(): void
     {
+        /** @var Link $object */
+
         $object = $this->objFromFixture(Link::class, 'google');
         $this->assertInstanceOf(RequiredFields::class, $object->getCMSValidator());
     }
@@ -37,8 +40,9 @@ class LinkTest extends SapphireTest
     /**
      *
      */
-    public function testValidateGood()
+    public function testValidateGood(): void
     {
+        /** @var Link $object */
         $object = $this->objFromFixture(Link::class, 'google');
         $object->write();
 
@@ -50,8 +54,9 @@ class LinkTest extends SapphireTest
     /**
      *
      */
-    public function testValidateNoTitle()
+    public function testValidateNoTitle(): void
     {
+        /** @var Link $object */
         $object = $this->objFromFixture(Link::class, 'google');
 
         $this->expectException(ValidationException::class);
@@ -62,8 +67,9 @@ class LinkTest extends SapphireTest
     /**
      *
      */
-    public function testValidateNoURL()
+    public function testValidateNoURL(): void
     {
+        /** @var Link $object */
         $object = $this->objFromFixture(Link::class, 'google');
 
         $this->expectException(ValidationException::class);

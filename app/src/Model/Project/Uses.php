@@ -14,11 +14,11 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ManyManyList;
 
 /**
- * @property string Title
- * @property string BackgroundColor
- * @property string ForegroundColor
- * @property string URLSegment
- * @property string Description
+ * @property string $Title
+ * @property string $BackgroundColor
+ * @property string $ForegroundColor
+ * @property string $URLSegment
+ * @property string $Description
  *
  * @method Image Image()
  *
@@ -59,7 +59,7 @@ class Uses extends DataObject
     ];
 
     /**
-     * @var string[][]
+     * @var mixed[]
      * @config
      */
     private static $indexes = [
@@ -114,12 +114,20 @@ class Uses extends DataObject
         return '';
     }
 
+     /**
+     * @return string
+     */
+    public function getAbsoluteLURL(): string
+    {
+        throw new \Exception(self::class . " must implement getAbsoluteLURL()");
+    }
+
     /**
      * Get the absolute URL for this page, including protocol and host.
      *
      * @return string
      */
-    public function AbsoluteLink()
+    public function AbsoluteLink(): string
     {
         if ($this->hasMethod('alternateAbsoluteLink')) {
             return $this->alternateAbsoluteLink();
@@ -132,17 +140,17 @@ class Uses extends DataObject
      * Get the title for use in menus for this page.
      * If the MenuTitle field is set it returns that, else it returns the Title field.
      *
-     * @return string
+     * @return mixed
      */
-    public function getMenuTitle()
+    public function getMenuTitle(): mixed
     {
         return $this->getField('Title');
     }
 
     /**
-     * @return DataObject|ProjectHolder|null
+     * @return ProjectHolder|null
      */
-    public function getProjectHolder(): DataObject
+    public function getProjectHolder(): ?ProjectHolder
     {
         return ProjectHolder::get()->first();
     }
@@ -150,8 +158,11 @@ class Uses extends DataObject
     /**
      * @return int
      */
-    public function getPageLevel()
+    public function getPageLevel(): int
     {
+        if ($this->getProjectHolder() == null) {
+            return 0;
+        }
         return $this->getProjectHolder()->getPageLevel() + 2;
     }
 }

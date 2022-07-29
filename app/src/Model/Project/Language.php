@@ -4,6 +4,9 @@ namespace Mak001\Portfolio\Model\Project;
 
 use Mak001\Portfolio\Page\Project;
 
+/**
+ * @method ManyManyList|Project[] Projects()
+ */
 class Language extends Uses
 {
     /**
@@ -25,14 +28,20 @@ class Language extends Uses
      */
     public function Link(): string
     {
+        if ($this->getProjectHolder() == null) {
+            return '';
+        }
         return $this->getProjectHolder()->LanguageLink($this->URLSegment);
     }
 
     /**
-     * @return string
+     * @inheritDoc
      */
     public function getAbsoluteLURL(): string
     {
+        if ($this->getProjectHolder() == null) {
+            return '';
+        }
         return $this->getProjectHolder()->LanguageLink() . '/';
     }
 }

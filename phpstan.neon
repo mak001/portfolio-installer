@@ -1,0 +1,13 @@
+includes:
+    - vendor/syntro/silverstripe-phpstan/phpstan.neon
+parameters:
+    bootstrapFiles:
+        - vendor/syntro/silverstripe-phpstan/bootstrap.php
+    ignoreErrors:
+        - '#Static method SilverStripe\\View\\Requirements::themedCSS\(\) invoked with 3 parameters, 1-2 required\.#'
+        - '#Dynamic call to static method PHPUnit\\Framework\\Assert::.*#'
+        - '#Call to an undefined method Mak001\\Portfolio\\Extension\\FormFieldExtension\|SilverStripe\\Forms\\FormField::isAdminURL\(\)#'
+        - '#\$fixture_file type has no value type specified in iterable type array#'
+    paths:
+    - app/src
+    - app/tests

@@ -6,11 +6,11 @@ use Mak001\Portfolio\Page\ResumePage;
 use SilverStripe\ORM\DataObject;
 
 /**
- * @property string Title
- * @property string Description
+ * @property string $Title
+ * @property string $Description
  *
- * @property int ResumeID
- * @method ResumePage Resume
+ * @property int $ResumeID
+ * @method ResumePage Resume()
  */
 class Skill extends DataObject
 {
