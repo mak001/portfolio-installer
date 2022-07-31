@@ -59,30 +59,30 @@ class ProjectHolder extends \Page
      */
     public function onBeforeUpdateBreadcrumbItems(&$crumbItems): void
     {
-        parent::onBeforeUpdateBreadcrumbItems($breadcrumbs);
+        parent::onBeforeUpdateBreadcrumbItems($crumbItems);
         $controller = Controller::curr();
         if ($controller instanceof ProjectHolderController) {
             if ($controller->getAction() == 'frameworks') {
-                $breadcrumbs->push(new Breadcrumb(
+                $crumbItems->push(new Breadcrumb(
                     $this->FrameworkLink(),
                     'Frameworks',
                     $this->getPageLevel() + 1
                 ));
 
                 if ($framework = $controller->getFramework()) {
-                    $breadcrumbs->push($framework);
+                    $crumbItems->push($framework);
                 }
             }
 
             if ($controller->getAction() == 'languages') {
-                $breadcrumbs->push(new Breadcrumb(
+                $crumbItems->push(new Breadcrumb(
                     $this->LanguageLink(),
                     'Languages',
                     $this->getPageLevel() + 1
                 ));
 
                 if ($language = $controller->getLanguage()) {
-                    $breadcrumbs->push($language);
+                    $crumbItems->push($language);
                 }
             }
         }
