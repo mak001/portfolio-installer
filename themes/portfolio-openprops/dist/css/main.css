@@ -285,7 +285,7 @@ header label {
   cursor: pointer;
   display: none;
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   header label {
     display: block;
   }
@@ -508,7 +508,7 @@ h1, h2, h3, h4, h5, h6, p {
   max-inline-size: 100%;
 }
 
-@media (width >= 1440px) {
+@media (min-width: 1440px) {
   header, main, footer {
     margin: auto;
     min-inline-size: var(--size-xl);
@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   h1 {
     text-align: center;
   }
