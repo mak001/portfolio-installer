@@ -539,7 +539,7 @@ rect[class*=task-type-], rect[class*=section-type-] {
   opacity: 0.85 !important;
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   blockquote, pre {
     width: 85%;
   }

@@ -6,7 +6,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .uses {
     width: 85%;
   }
@@ -26,7 +26,7 @@
   text-align: center;
   grid-column: sources-start/sources-end;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .uses {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "languages frameworks sources";
@@ -38,12 +38,12 @@
     text-align: end;
   }
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .uses .frameworks {
     text-align: end;
   }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .uses {
     grid-template-columns: 1fr;
     grid-template-areas: "languages" "frameworks" "sources";
