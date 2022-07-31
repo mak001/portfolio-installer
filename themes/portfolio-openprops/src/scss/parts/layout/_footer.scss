@@ -11,26 +11,6 @@ footer {
 
     div:first-child {
         margin-bottom: var(--size-2);
-
-        a {
-            background-color: var(--brand);
-            color: var(--surface1);
-            text-decoration: none;
-            font-weight: var(--font-weight-6);
-            font-size: var(--font-size-1);
-            padding-left: var(--size-3);
-            padding-right: var(--size-3);
-            border-radius: var(--radius-3);
-            box-shadow: var(--inner-shadow-2);
-
-            &:hover {
-                box-shadow: var(--shadow-2);
-            }
-
-            &:active {
-                box-shadow: var(--inner-shadow-5);
-            }
-        }
     }
 
     i {

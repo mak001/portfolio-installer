@@ -1,6 +1,6 @@
 <footer>
     <div class="text-center">
-        <a href="#" class="no-decoration">Jump to top of page</a>
+        <a href="#" class="btn">Jump to top of page</a>
     </div>
     <div class="text-center">
         <% loop $SiteConfig.Links %>
