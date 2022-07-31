@@ -6,7 +6,7 @@ a {
     text-decoration: none;
 }
 
-a:not(.no-decoration):not(.icon) {
+a:not(.no-decoration, .icon, .btn) {
     background-image: linear-gradient(var(--brand), var(--brand));
     text-decoration: none;
     background-repeat: no-repeat;
@@ -32,6 +32,41 @@ a:not(.no-decoration):not(.icon) {
 
     &:hover {
         color: var(--brand);
+    }
+}
+
+span.btn {
+    padding-block: var(--size-1);
+    margin-block: calc(var(--size-1) * -1);
+}
+
+.btn {
+    background-color: var(--brand);
+    color: var(--surface1);
+    text-decoration: none;
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-1);
+    padding-left: var(--size-3);
+    padding-right: var(--size-3);
+    margin-right: var(--size-1);
+    margin-left: var(--size-1);
+    border-radius: var(--radius-3);
+    box-shadow: var(--inner-shadow-2);
+    box-sizing: border-box;
+
+    &:hover:not(span, :disabled) {
+        box-shadow: var(--shadow-2);
+    }
+
+    &:active:not(span, :disabled) {
+        box-shadow: var(--inner-shadow-5);
+    }
+
+    &.outline {
+        background-color: transparent;
+        color: var(--brand);
+        border-color: var(--brand);
+        border-width: 1px;
     }
 }
 
