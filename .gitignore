@@ -13,4 +13,5 @@ docker-compose.yml
 *.log
 **/node_modules/
 **/open-props/
+**/portfolio-openprops/dist
 .phpunit.result.cache
