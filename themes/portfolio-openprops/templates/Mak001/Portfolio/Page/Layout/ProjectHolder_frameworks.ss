@@ -5,6 +5,7 @@ $ElementalArea
     <a href="$LanguageLink">Languages</a>
 </div>
 
+<div class="project-list">
 <% if $PaginatedFrameworks %>
     <% loop $PaginatedFrameworks %>
         <% include Uses %>
@@ -15,3 +16,4 @@ $ElementalArea
 <% else %>
     No Frameworks
 <% end_if %>
+</div>
