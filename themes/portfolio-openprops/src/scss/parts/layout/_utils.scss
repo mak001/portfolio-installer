@@ -53,6 +53,8 @@ span.btn {
     border-radius: var(--radius-3);
     box-shadow: var(--inner-shadow-2);
     box-sizing: border-box;
+    user-select: none;
+    transition: all 0.25s ease;
 
     &:hover:not(span, [disabled]) {
         box-shadow: var(--shadow-2);
@@ -67,6 +69,11 @@ span.btn {
         color: var(--brand);
         border-color: var(--brand);
         border-width: 1px;
+
+        &:hover {
+            background-color: var(--brand);
+            color: var(--surface-1);
+        }
     }
 
     &[disabled] {
