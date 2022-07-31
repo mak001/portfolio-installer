@@ -54,11 +54,11 @@ span.btn {
     box-shadow: var(--inner-shadow-2);
     box-sizing: border-box;
 
-    &:hover:not(span, :disabled) {
+    &:hover:not(span, [disabled]) {
         box-shadow: var(--shadow-2);
     }
 
-    &:active:not(span, :disabled) {
+    &:active:not(span, [disabled]) {
         box-shadow: var(--inner-shadow-5);
     }
 
@@ -67,6 +67,11 @@ span.btn {
         color: var(--brand);
         border-color: var(--brand);
         border-width: 1px;
+    }
+
+    &[disabled] {
+        background-color: transparent;
+        color: var(--brand);
     }
 }
 
