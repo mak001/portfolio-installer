@@ -7,9 +7,11 @@ $ElementalArea
 
 <div class="project-list">
 <% if $PaginatedFrameworks %>
+    <div class="projects">
     <% loop $PaginatedFrameworks %>
         <% include Uses %>
     <% end_loop %>
+    </div>
     <% with $PaginatedFrameworks %>
         <% include Pagination %>
     <% end_with %>
