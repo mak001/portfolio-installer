@@ -56,6 +56,14 @@ span.btn {
     user-select: none;
     transition: all 0.25s ease;
 
+    @media (--motionNotOK) {
+        transition: none;
+    }
+
+    @media (--OSlight) {
+        color: var(--text-1);
+    }
+
     &:hover:not(span, [disabled]) {
         box-shadow: var(--shadow-2);
     }
@@ -70,6 +78,10 @@ span.btn {
         border-color: var(--brand);
         border-width: 1px;
 
+        @media (--OSlight) {
+            color: var(--text-1);
+        }
+
         &:hover {
             background-color: var(--brand);
             color: var(--surface-1);
@@ -79,6 +91,10 @@ span.btn {
     &[disabled] {
         background-color: transparent;
         color: var(--brand);
+
+        @media (--OSlight) {
+            color: var(--text-1);
+        }
     }
 }
 
