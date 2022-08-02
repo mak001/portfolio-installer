@@ -130,18 +130,6 @@ class ProjectHolderController extends \PageController
      */
     public function getPaginatedProjects(int $num = 6): PaginatedList
     {
-        $filter = [
-            'ParentID' => $this->ID,
-        ];
-
-        if ($language = $this->getLanguage()) {
-            $filter['Languages.ID'] = $language->ID;
-        }
-
-        if ($framework = $this->getFramework()) {
-            $filter['Frameworks.ID'] = $framework->ID;
-        }
-
         return PaginatedList::create($this->getProjects(), $this->getRequest())
             ->setPageLength($num);
     }

@@ -5,17 +5,21 @@ $ElementalArea
     <a href="$FrameworkLink">Frameworks</a>
 </div>
 
-<div class="project-list">
-<% if $PaginatedLanguages %>
-    <div class="projects">
-    <% loop $PaginatedLanguages %>
-        <% include Uses %>
-    <% end_loop %>
-    </div>
-    <% with $PaginatedLanguages %>
-        <% include Pagination %>
-    <% end_with %>
+<% if $Language %>
+    <% include ProjectList %>
 <% else %>
-    No Languages
+    <div class="uses-list">
+    <% if $PaginatedLanguages %>
+        <div class="uses">
+        <% loop $PaginatedLanguages %>
+            <% include Uses %>
+        <% end_loop %>
+        </div>
+        <% with $PaginatedLanguages %>
+            <% include Pagination %>
+        <% end_with %>
+    <% else %>
+        No Languages
+    <% end_if %>
+    </div>
 <% end_if %>
-</div>
