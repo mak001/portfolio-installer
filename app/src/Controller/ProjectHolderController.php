@@ -175,6 +175,23 @@ class ProjectHolderController extends \PageController
     }
 
     /**
+     * @param HTTPRequest|null $request
+     * @return string
+     */
+    public function getSection(HTTPRequest $request = null): string
+    {
+        if ($request == null) {
+            $request = $this->getRequest();
+        }
+
+        if ($action = $request->param('Action')) {
+            return $action;
+        }
+
+        return  'projects';
+    }
+
+    /**
      * If the request should be shown in a table
      *
      * @param HTTPRequest|null $request
