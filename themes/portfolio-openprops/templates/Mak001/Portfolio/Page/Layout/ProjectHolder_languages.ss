@@ -1,9 +1,6 @@
 $ElementalArea
 
-<div class="project-nav">
-    <a href="$Link">Projects</a>
-    <a href="$FrameworkLink">Frameworks</a>
-</div>
+<% include ProjectHolderNav %>
 
 <% if $Language %>
     <% include ProjectList %>
