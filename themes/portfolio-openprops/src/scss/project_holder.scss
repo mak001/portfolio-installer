@@ -7,17 +7,24 @@
     }
 }
 
-.project-list {
+.project-list .projects {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.uses-list .uses {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project-list, .uses-list {
     margin-top: var(--size-3);
 
-    .projects {
+    .projects, .uses {
         display: grid;
         grid-gap: var(--size-4);
-        grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: 1fr;
         text-align: center;
 
-        .project {
+        .project, .use {
             background-color: var(--surface2);
             padding: var(--size-3);
             box-shadow: var(--inner-shadow-2);

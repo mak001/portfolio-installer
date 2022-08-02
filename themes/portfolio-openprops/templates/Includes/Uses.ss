@@ -1,4 +1,4 @@
-<div class="project">
+<div class="use">
     <h5>$Title</h5>
     <div class="description">$Description</div>
     <a href="$Link" class="btn outline">View</a>
