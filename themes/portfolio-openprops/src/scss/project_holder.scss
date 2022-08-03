@@ -17,12 +17,12 @@
 
 .project-list, .uses-list {
     margin-top: var(--size-3);
+    text-align: center;
 
     .projects, .uses {
         display: grid;
         grid-gap: var(--size-4);
         grid-auto-rows: 1fr;
-        text-align: center;
 
         .project, .use {
             background-color: var(--surface2);

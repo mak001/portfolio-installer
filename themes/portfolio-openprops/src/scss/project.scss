@@ -2,52 +2,48 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "languages frameworks" "sources sources";
-    gap: var(--size-1);
+    grid-gap: var(--size-4);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: var(--size-5);
+    margin-top: var(--size-2);
+    text-align: center;
 
-    @media (--lg-n-above) {
-        & {
-            width: 85%;
-        }
+    h5 {
+        margin-bottom: var(--size-2);
     }
 
     a, span {
         display: inline-block;
     }
 
+    .btn {
+        margin-top: var(--size-1);
+        margin-bottom: var(--size-1);
+    }
+
+    .languages, .frameworks, .sources {
+        background-color: var(--surface2);
+        box-shadow: var(--inner-shadow-2);
+        border-radius: var(--border-size-3);
+        padding: var(--size-3);
+    }
+
     .languages {
-        text-align: start;
         grid-column: languages-start / languages-end;
     }
 
     .frameworks {
-        text-align: end;
         grid-column: frameworks-start / frameworks-end;
     }
 
    .sources {
-        text-align: center;
         grid-column: sources-start / sources-end;
    }
 
     @media (--md-n-above) {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "languages frameworks sources";
-
-        & .frameworks {
-            text-align: center;
-        }
-
-        & .sources {
-            text-align: end;
-        }
-    }
-
-    @media (--md-n-below) {
-        .frameworks {
-            text-align: end;
-        }
     }
 
     @media (--sm-n-below) {
@@ -55,7 +51,6 @@
         grid-template-areas: "languages" "frameworks" "sources";
 
         .languages, .frameworks, .sources {
-            text-align: center;
             margin-top: var(--size-1);
         }
     }

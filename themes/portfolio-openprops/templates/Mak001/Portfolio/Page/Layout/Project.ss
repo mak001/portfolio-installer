@@ -3,7 +3,7 @@
         <h5>Languages</h5>
         <% if $Languages %>
             <% loop $Languages %>
-                <div><a href="$Link" class="">$Title</a></div>
+                <a href="$Link" class="btn outline">$Title</a>
             <% end_loop %>
         <% else %>
             <div><span class="">None</span></div>
@@ -13,7 +13,7 @@
         <h5>Frameworks</h5>
         <% if $Frameworks %>
             <% loop $Frameworks %>
-                <div><a href="$Link" class="">$Title</a></div>
+                <a href="$Link" class="btn outline">$Title</a>
             <% end_loop %>
         <% else %>
             <div><span class="">None</span></div>

@@ -8,7 +8,6 @@ use Mak001\Portfolio\Page\Project;
 use Mak001\Portfolio\Page\ProjectHolder;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\ORM\DataList;
-use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\Requirements;
 use SilverStripe\View\ViewableData_Customised;
