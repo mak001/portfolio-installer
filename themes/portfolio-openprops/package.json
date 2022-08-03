@@ -18,5 +18,5 @@
     "sass": "^1.50.0",
     "postcss": "^8.4.14",
     "postcss-media-minmax": "^5.0.0"
-  },
+  }
 }
