@@ -24,7 +24,7 @@ set('writable_dirs', []);
 
 host('67.207.94.179')
     ->stage('production')
-    ->set('deploy_path', '/var/www/')
+    ->set('deploy_path', '/var/www')
     ->user('portfolio')
     ->set('branch', 'master')
     ->set('bin/composer', 'composer')
@@ -62,7 +62,7 @@ task('serverpilot:symlink', function () {
 // Backup existing data via SSPAK
 task('silverstripe:sspak', function () {
     // phpcs:ignore
-    run("{{bin/php}} {{deploy_path}}/current/sspak.phar save {{deploy_path}}/current/ {{deploy_path}}/current/sspaks/{{application}}-{{stage}}-" . strtotime('now') . ".sspak");
+    run("sspak save {{deploy_path}}/current/ {{deploy_path}}/current/sspaks/{{application}}-{{stage}}-" . strtotime('now') . ".sspak");
     write('SSPAK created!');
 })->desc('Backup existing data via SSPAK');
 
