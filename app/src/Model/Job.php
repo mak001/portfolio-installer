@@ -9,6 +9,7 @@ use SilverStripe\ORM\DataObject;
  * @property string $Title
  * @property string $CompanyName
  * @property string $CompanyURL
+ * @property string $CompanyDescription
  * @property string $Location
  * @property string $StartDate
  * @property string $EndDate
@@ -34,6 +35,7 @@ class Job extends DataObject
         'Title' => 'Varchar',
         'CompanyName' => 'Varchar',
         'CompanyURL' => 'Varchar',
+        'CompanyDescription' => 'Varchar',
         'Location' => 'Varchar',
         'StartDate' => 'Varchar',
         'EndDate' => 'Varchar',
