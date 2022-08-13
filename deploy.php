@@ -24,7 +24,7 @@ set('writable_dirs', []);
 
 host('67.207.94.179')
     ->stage('production')
-    ->set('deploy_path', '/var/www/html')
+    ->set('deploy_path', '/var/www/')
     ->user('portfolio')
     ->set('branch', 'master')
     ->set('bin/composer', 'composer')
@@ -55,7 +55,7 @@ after('deploy:failed', 'deploy:unlock');
 
 // Serverpilot symlink to webroot task
 task('serverpilot:symlink', function () {
-    run("ln -s {{deploy_path}}/current {{deploy_path}}/public");
+    run("ln -s {{deploy_path}}/current {{deploy_path}}/html");
     write('Symlink created!');
 })->desc('Create symlink to public webroot');
 
