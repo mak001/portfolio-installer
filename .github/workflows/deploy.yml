@@ -1,0 +1,21 @@
+on:
+  worflow_run: Tests
+  branches: master
+  types: completed
+
+jobs:
+  deploy:
+    needs: test
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' && ${{ github.event_name != 'pull_request' }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: musps/action-deployer-php@master
+        with:
+          args: deploy prod
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
