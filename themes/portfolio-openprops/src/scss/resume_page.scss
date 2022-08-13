@@ -1,0 +1,66 @@
+h2 {
+    border-bottom-color: var(--surface-3);
+    border-bottom-width: var(--border-size-2);
+    margin-top: var(--size-3);
+    margin-bottom: var(--size-1);
+    font-weight: var(--font-weight-7);
+}
+
+.side-by-side {
+    display: flex;
+
+    p:last-child {
+        text-align: end;
+        flex-grow: 1;
+    }
+
+    @media (--sm-n-below) {
+        display: block;
+
+        p:last-child {
+            text-align: start;
+        }
+
+        p {
+            margin-top: var(--size-1);
+        }
+    }
+
+    @media (--md-n-above) {
+        p {
+            margin-top: 0;
+        }
+    }
+}
+
+.school, .job {
+    margin-top: var(--size-3);
+
+    h3 {
+        font-weight: var(--font-weight-6);
+    }
+
+    h3 + h3 {
+        font-weight: var(--font-weight-4);
+    }
+
+    .side-by-side {
+        font-style: italic;
+    }
+}
+
+.job {
+    .side-by-side, .company-description {
+        margin-bottom: var(--size-1);
+        margin-top: 0;
+    }
+
+    .company-description {
+        font-style: italic;
+        color: var(--text-2);
+    }
+
+    li {
+        max-inline-size: none;
+    }
+}
