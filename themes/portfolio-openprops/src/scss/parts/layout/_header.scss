@@ -130,11 +130,8 @@ header {
 
                 a {
                     display: block;
-
-                    @media (--md-n-below) {
-                        /* prevents underline from being cut off */
-                        margin-bottom: 3px;
-                    }
+                    /* prevents underline from being cut off */
+                    margin-bottom: 3px;
                 }
             }
         }
