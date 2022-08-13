@@ -16,6 +16,6 @@ jobs:
       - name: Deploy
         uses: musps/action-deployer-php@master
         with:
-          args: deploy prod
+          args: deploy production
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
