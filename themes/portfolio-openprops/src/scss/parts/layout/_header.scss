@@ -7,10 +7,28 @@ header {
     background-color: var(--surface1);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: var(--shadow-2);
+
+    @media (--md-n-below) {
+        display: block;
+    }
 
     .brand {
         font-size: var(--font-size-8);
         font-weight: var(--font-weight-7);
+
+        @media (--md-n-below) {
+            font-size: var(--font-size-7);
+        }
+
+        @media (--sm-n-below) {
+            font-size: var(--font-size-6);
+        }
     }
 
     input {
@@ -30,16 +48,23 @@ header {
             }
         }
 
-        &:checked ~ nav {
-            max-height: 100%;
+        &:checked ~ nav ul {
+            @media (--md-n-below) {
+                margin-top: initial;
+            }
         }
     }
 
     label {
         cursor: pointer;
         display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: inherit;
+        margin-top: var(--size-3);
 
-        @media (--sm-n-below) {
+        @media (--md-n-below) {
             display: block;
         }
 
@@ -64,8 +89,11 @@ header {
                 display: block;
                 height: 100%;
                 position: absolute;
-                transition: all .2s ease-out;
                 width: 100%;
+
+                @media (--motionOK) {
+                    transition: all .2s ease-out;
+                }
             }
         }
     }
@@ -74,11 +102,24 @@ header {
         flex-grow: 1;
         margin-top: auto;
         margin-bottom: auto;
+        background-color: inherit;
+        overflow: hidden;
 
         ul {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+            flex-wrap: wrap;
+            padding: 0;
+
+            @media (--md-n-below) {
+                display: block;
+                margin-top: -100%;
+
+                @media (--motionOK) {
+                    transition: margin-top .5s ease-out;
+                }
+            }
 
             li {
                 display: block;
@@ -89,6 +130,11 @@ header {
 
                 a {
                     display: block;
+
+                    @media (--md-n-below) {
+                        /* prevents underline from being cut off */
+                        margin-bottom: 3px;
+                    }
                 }
             }
         }
@@ -131,7 +177,7 @@ menu.breadcrumb {
 }
 
 header, menu.breadcrumb {
-    &, ul {
+    &:not(header), ul {
         display: flex;
         flex-direction: row;
 
