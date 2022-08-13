@@ -1,7 +1,10 @@
+name: Deployment
+
 on:
-  worflow_run: Tests
-  branches: master
-  types: completed
+  workflow_run:
+    workflows: Tests
+    branches: master
+    types: completed
 
 jobs:
   deploy:
