@@ -34,7 +34,7 @@ task('deploy', [
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',
-    'silverstripe:sspak',
+    //'silverstripe:sspak',
     'deploy:release',
     'deploy:update_code',
     'gulp',
