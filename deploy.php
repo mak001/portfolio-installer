@@ -71,10 +71,9 @@ task('silverstripe:sspak', function () {
 })->desc('Backup existing data via SSPAK');
 
 task('gulp', function () {
-    run("cd {{deploy_path}}/themes/portfolio-openprops");
+    cd("{{release_path}}/themes/portfolio-openprops");
     run("npm i");
     run("gulp build -prod");
     run("rm -rf node_modules");
-    run("cd {{deploy_path}}");
     write('Built CSS and JavaScript');
 })->desc('Builds CSS and JavaScript and then removes node_modules');
