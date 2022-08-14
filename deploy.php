@@ -6,6 +6,8 @@ require 'recipe/silverstripe.php';
 
 set('application', 'portfolio');
 
+set('repository', 'git@github.com:mak001/portfolio-installer.git');
+
 // Shared files/dirs between deploys
 set('shared_files', [
     '_ss_environment.php',
@@ -21,6 +23,8 @@ set('shared_dirs', [
 
 // Writable dirs by web server
 set('writable_dirs', []);
+
+set('update_code_strategy', 'archive');
 
 host('67.207.94.179')
     ->stage('production')
