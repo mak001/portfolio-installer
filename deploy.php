@@ -10,8 +10,7 @@ set('repository', 'https://github.com/mak001/portfolio-installer.git');
 
 // Shared files/dirs between deploys
 set('shared_files', [
-    '_ss_environment.php',
-    'sspak.phar',
+    '.env',
     'silverstripe.log',
 ]);
 
