@@ -1,5 +1,7 @@
 name: Deployment
 
+concurrency: deploy production
+
 on:
   workflow_run:
     workflows: Tests
