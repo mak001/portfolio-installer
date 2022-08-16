@@ -3,6 +3,8 @@
 @use '../../open-props/fonts';
 @use '../../open-props/media';
 
+@custom-media --md-n-below-motionOK (--motionOK) and (--md-n-below);
+
 header {
     background-color: var(--surface1);
     display: flex;
@@ -115,10 +117,10 @@ header {
             @media (--md-n-below) {
                 display: block;
                 margin-top: -100%;
+            }
 
-                @media (--motionOK) {
-                    transition: margin-top .5s ease-out;
-                }
+            @media (--md-n-below-motionOK) {
+                transition: margin-top .5s ease-out;
             }
 
             li {

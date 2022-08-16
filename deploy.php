@@ -8,6 +8,9 @@ set('application', 'portfolio');
 
 set('repository', 'https://github.com/mak001/portfolio-installer.git');
 
+// [Optional] Allocate tty for git clone. Default value is false.
+set('git_tty', true);
+
 // Shared files/dirs between deploys
 set('shared_files', [
     '.env',
@@ -15,15 +18,13 @@ set('shared_files', [
 ]);
 
 set('shared_dirs', [
-    'assets',
+    'public/assets',
     'sspaks',
     'silverstripe-cache',
 ]);
 
 // Writable dirs by web server
 set('writable_dirs', []);
-
-set('update_code_strategy', 'archive');
 
 host('67.207.94.179')
     ->stage('production')
@@ -47,7 +48,6 @@ task('deploy', [
     'silverstripe:buildflush',
     'deploy:clear_paths',
     'deploy:symlink',
-    'serverpilot:symlink',
     'deploy:unlock',
     'cleanup',
     'success'
@@ -55,12 +55,6 @@ task('deploy', [
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
-
-// Serverpilot symlink to webroot task
-task('serverpilot:symlink', function () {
-    run("ln -s {{deploy_path}}/current {{deploy_path}}/html");
-    write('Symlink created!');
-})->desc('Create symlink to public webroot');
 
 // Backup existing data via SSPAK
 task('silverstripe:sspak', function () {
@@ -71,7 +65,7 @@ task('silverstripe:sspak', function () {
 
 task('gulp', function () {
     cd("{{release_path}}/themes/portfolio-openprops");
-    run("npm i");
+    run("npm ci");
     run("gulp build -prod");
     run("rm -rf node_modules");
     write('Built CSS and JavaScript');
