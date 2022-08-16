@@ -8,9 +8,6 @@ set('application', 'portfolio');
 
 set('repository', 'https://github.com/mak001/portfolio-installer.git');
 
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
-
 // Shared files/dirs between deploys
 set('shared_files', [
     '.env',
