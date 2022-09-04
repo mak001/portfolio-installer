@@ -25,7 +25,7 @@ use SilverStripe\ORM\ManyManyList;
  * @property int $MainPhotoID
  * @method Image MainPhoto()
  *
- * @method HasManyList Sources()
+ * @method HasManyList|Link[] Sources()
  *
  * @method ManyManyList|Language[] Languages()
  * @method ManyManyList|Framework[] Frameworks()

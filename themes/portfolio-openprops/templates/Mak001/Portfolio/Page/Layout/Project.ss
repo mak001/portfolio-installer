@@ -23,7 +23,7 @@
         <h5>Sources</h5>
         <% if $Sources %>
             <% loop $Sources %>
-                <div><a href="$Link" class="">$Title</a></div>
+                <a href="$URL" class="btn outline">$Title</a>
             <% end_loop %>
         <% else %>
             <div><span class="">None</span></div>
