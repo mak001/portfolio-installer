@@ -75,8 +75,9 @@ span.btn {
     &.outline {
         background-color: transparent;
         color: var(--brand);
-        border-color: var(--brand);
-        border-width: 1px;
+        outline-color: var(--brand);
+        outline-width: 1px;
+        outline-style: solid;
 
         @media (--OSlight) {
             color: var(--text-1);

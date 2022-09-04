@@ -7,6 +7,7 @@ use Mak001\Portfolio\Model\Project\Language;
 use Mak001\Portfolio\Page\Project;
 use Mak001\Portfolio\Page\ProjectHolder;
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\Requirements;
@@ -134,10 +135,14 @@ class ProjectHolderController extends \PageController
     }
 
     /**
-     * @return DataList
+     * @return ArrayList
      */
-    public function getLanguages(): DataList
+    public function getLanguages(): ArrayList|DataList
     {
+        if ($this->Children()->count() === 0) {
+            return ArrayList::create();
+        }
+
         return Language::get()->filter([
             'Projects.ID' => $this->Children()->column('ID'),
         ]);
@@ -154,10 +159,14 @@ class ProjectHolderController extends \PageController
     }
 
     /**
-     * @return DataList
+     * @return ArrayList
      */
-    public function getFrameworks(): DataList
+    public function getFrameworks(): ArrayList|DataList
     {
+        if ($this->Children()->count() === 0) {
+            return ArrayList::create();
+        }
+
         return Framework::get()->filter([
             'Projects.ID' => $this->Children()->column('ID'),
         ]);
