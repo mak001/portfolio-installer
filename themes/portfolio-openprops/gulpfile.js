@@ -10,9 +10,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
 var minmax = require('postcss-media-minmax');
-const shortCssVars = require('postcss-short-css-vars');
 const fs = require('fs');
-const uglifycss = require('gulp-uglifycss');
 const babel = require('gulp-babel');
 const { argv } = require('process');
 
@@ -53,11 +51,7 @@ gulp.task('open-props', gulp.series('clean-open-props', 'copy-open-props'));
 
 gulp.task('scss', function () {
     const sassOptions = devBuild ? { outputStyle: 'expanded' } : { outputStyle: 'compressed' };
-
     const postcssPlugins = [postcssCustomMedia(), minmax()];
-    if (!devBuild) {
-        postcssPlugins.push(shortCssVars());
-    }
 
     return gulp.src('./src/scss/**/*.scss')
         .pipe(gulpif(devBuild, sourcemaps.init()))
